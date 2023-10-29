@@ -17,7 +17,7 @@ import {
     TABLE,
     FILE,
     PHONE
-} from './formFieldsexport interfaces'
+} from './formFieldsInterfaces'
 export interface IFormSchemaPart {
     type: FormSchemaType,
     section: ISection
