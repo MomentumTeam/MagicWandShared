@@ -1,4 +1,5 @@
 import { DateFieldFormat, DateFieldRestrictionType, ListFieldItemMarker, LogoFieldType, TextFieldSize, TimeFieldFormat, identifierFieldType, OptionsLayout } from './enums'
+import { IColumnTable } from './interfaces'
 
 export interface PARAGRAPH {
     text: String
@@ -110,6 +111,6 @@ export interface PHONE {
     description: String
 }
 
-type HtmlString {
+export interface HtmlString {
     text: String
 }
