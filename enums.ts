@@ -1,4 +1,4 @@
-export const enum FieldType {
+export enum FieldType {
     PARAGRAPH,
     HEADLINE,
     TEXT,
@@ -17,19 +17,19 @@ export const enum FieldType {
     DATE
 }
 
-export const enum RoleType {
+export enum RoleType {
     UNIT,
     BASIC
 }
 
-export const enum Premission {
+export enum Premission {
     SUPER_ADMIN,
     UNIT_ADMIN,
     CORPS_EDITOR,
     UNIT_EDITOR
 }
 
-export const enum Status {
+export enum Status {
     APPROVED,
     DECLINED,
     SUBMITTED,
@@ -37,12 +37,12 @@ export const enum Status {
     SAVED
 }
 
-export const enum FormSchemaType {
+export enum FormSchemaType {
     CORPS,
     UNIT
 }
 
-export const enum ApproverStatus {
+export enum ApproverStatus {
     WAITING,
     APPROVED,
     DECLINED,
@@ -51,11 +51,11 @@ export const enum ApproverStatus {
     UNKNOWN
 }
 
-export const enum HistoryActionType {
+export enum HistoryActionType {
     RETURN
 }
 
-export const enum Rank {
+export enum Rank {
     "אלם",
     "אלף",
     "אעב",
@@ -83,23 +83,23 @@ export const enum Rank {
     "לא ידוע"
 }
 
-export const enum TextFieldSize {
+export enum TextFieldSize {
     SHORT,
     LINE,
     BOX
 }
 
-export const enum identifierFieldType {
+export enum identifierFieldType {
     IDENTITY_CARD,
     PERSONAL_NUMBER
 }
 
-export const enum DateFieldRestrictionType {
+export enum DateFieldRestrictionType {
     PAST,
     FUTURE
 }
 
-export const enum DateFieldFormat {
+export enum DateFieldFormat {
     "DD.MM.YY",
     "DD.MM.YYYY",
     "DD/MM/YY",
@@ -107,23 +107,23 @@ export const enum DateFieldFormat {
     "HEBREW"
 }
 
-export const enum FormSchemaPartType {
+export enum FormSchemaPartType {
     SECTION,
     LINE
 }
 
-export const enum SectionPartType {
+export enum SectionPartType {
     SECTION,
     FIELD
 }
 
-export const enum ListFieldItemMarker {
+export enum ListFieldItemMarker {
     NUMBER,
     CIRCLE,
     STAR
 }
 
-export const enum LogoFieldType {
+export enum LogoFieldType {
     "חטיבת ההפעלה",
     "הצנזורה הצבאית",
     "08200", //check with carmel
@@ -147,18 +147,18 @@ export const enum LogoFieldType {
     "מערך מדעי ההתנהגות"
 }
 
-export const enum TimeFieldFormat {
+export enum TimeFieldFormat {
     "12H",
     "24H"
 }
 
-export const enum OptionsLayout {
+export enum OptionsLayout {
     COLUMN,
     ROW,
     TABLE
 }
 
-export const enum ColumnType {
+export enum ColumnType {
     FIELD,
     SUM,
     CHECKBOX,
@@ -167,13 +167,13 @@ export const enum ColumnType {
     DROPDOWN
 }
 
-export const enum tableFieldCellAlignment {
+export enum tableFieldCellAlignment {
     CENTER,
     RIGHT,
     LEFT
 }
 
-export const enum tableFieldCellBackgroundColor {
+export enum tableFieldCellBackgroundColor {
     PRIMARY,
     SECONDARY,
     TERTIARY

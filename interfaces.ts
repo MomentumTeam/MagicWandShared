@@ -1,5 +1,5 @@
-import { ApproverStatus, ColumnType, FieldType, FormSchemaType, SectionPartType, tableFieldCellAlignment, tableFieldCellBackgroundColor } from './enums'
-import { Types } from 'mongoose';
+import { ApproverStatus, ColumnType, FieldType, FormSchemaType, SectionPartType, Status, tableFieldCellAlignment, tableFieldCellBackgroundColor } from './enums'
+import mongoose from 'mongoose';
 import {
     PARAGRAPH,
     HEADLINE,
@@ -25,7 +25,7 @@ export interface IFormSchemaPart {
 
 export interface ISection {
     parts: ISectionPart[]
-    approverRoleId: Types.ObjectId,
+    approverRoleId: mongoose.Schema.Types.ObjectId,
     hasBorder: boolean,
     title: string
 }
@@ -63,23 +63,23 @@ export interface IUser {
     identityCard: String
     hierarchy: String
     unitId: String
-    uniqueId: Types.ObjectId
+    uniqueId: mongoose.Schema.Types.ObjectId
     personalNumber: String
 }
 
 export interface IFormSchemaObject {
-    formSchemaId: Types.ObjectId
+    formSchemaId: mongoose.Schema.Types.ObjectId
     nextFormSchemaObject: IFormSchemaObject
 }
 
 export interface IFormInstanceObject {
-    formInstanceId: Types.ObjectId
+    formInstanceId: mongoose.Schema.Types.ObjectId
     nextFormInstanceObject: IFormInstanceObject
 }
 
 export interface IApprover {
     status: ApproverStatus
-    roleId: Types.ObjectId
+    roleId: mongoose.Schema.Types.ObjectId
     reason: String
     user: IUser
 }
@@ -103,4 +103,23 @@ export interface ICell {
     backgroundColor: tableFieldCellBackgroundColor
     mergeRight: Boolean
     mergeDown: Boolean
+}
+
+
+export interface IInstance {
+    id: mongoose.Schema.Types.ObjectId,
+    code: String,
+    status: Status,
+    submittedBy: IUser,
+    submittedAt: Date,
+    schemaId: mongoose.Schema.Types.ObjectId,
+    approver: IApprover,
+    isSubmitterArchived: Boolean,
+    forms: [mongoose.Schema.Types.ObjectId],
+    displayName : String,
+    isActive: Boolean,
+    answers: [any],
+    headerAnswers: [any],
+    processInstanceId: mongoose.Schema.Types.ObjectId,
+    approvers: [IApprover],
 }
