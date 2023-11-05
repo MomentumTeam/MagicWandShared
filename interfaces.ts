@@ -1,5 +1,5 @@
-import { ApproverStatus, ColumnType, FieldType, FormSchemaType, SectionPartType, tableFieldCellAlignment, tableFieldCellBackgroundColor } from './enums'
-import { Types } from 'mongoose';
+import { ApproverStatus, ColumnType, FieldType, FormSchemaType, SectionPartType, tableFieldCellAlignment, tableFieldCellBackgroundColor, Status } from './enums'
+import mongoose, { Types } from 'mongoose';
 import {
     PARAGRAPH,
     HEADLINE,
@@ -17,7 +17,8 @@ import {
     TABLE,
     FILE,
     PHONE
-} from './formFieldsexport interfaces'
+} from '../magicwand-interfaces/formFieldsInterfaces'
+
 export interface IFormSchemaPart {
     type: FormSchemaType,
     section: ISection
@@ -103,4 +104,20 @@ export interface ICell {
     backgroundColor: tableFieldCellBackgroundColor
     mergeRight: Boolean
     mergeDown: Boolean
+}
+
+
+export interface IForm {
+    code: String
+    displayName: String
+    status: Status
+    formSchemaId: mongoose.Schema.Types.ObjectId
+    isActive: Boolean
+    submittedBy: IUser
+    submittedAt: Date
+    answers: any[]
+    headerAnswers: any[]
+    isSubmitterArchived: Boolean
+    processInstanceId: mongoose.Schema.Types.ObjectId
+    approvers: IApprover[]
 }

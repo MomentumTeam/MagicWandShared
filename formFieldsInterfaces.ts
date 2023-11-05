@@ -1,5 +1,5 @@
 import { DateFieldFormat, DateFieldRestrictionType, ListFieldItemMarker, LogoFieldType, TextFieldSize, TimeFieldFormat, identifierFieldType, OptionsLayout } from './enums'
-
+import { IColumnTable } from '../magicwand-interfaces/interfaces'
 export interface PARAGRAPH {
     text: String
 }
@@ -109,7 +109,6 @@ export interface PHONE {
     required: Boolean
     description: String
 }
-
-type HtmlString {
+export interface HtmlString {
     text: String
 }
