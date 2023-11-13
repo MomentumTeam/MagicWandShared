@@ -116,10 +116,50 @@ export interface IInstance {
     approver: IApprover,
     isSubmitterArchived: Boolean,
     forms: [mongoose.Schema.Types.ObjectId],
-    displayName : String,
+    displayName: String,
     isActive: Boolean,
     answers: [any],
     headerAnswers: [any],
     processInstanceId: mongoose.Schema.Types.ObjectId,
     approvers: [IApprover],
+}
+
+export interface ISchema {
+    id: mongoose.Schema.Types.ObjectId,
+    code: String,
+    type: FormSchemaType,
+    categoryId: mongoose.Schema.Types.ObjectId,
+    name: String,
+    createdAt: Date,
+    createdBy: IUser,
+    managersUniqueIds: [mongoose.Schema.Types.ObjectId],
+    approversRoleIds: [mongoose.Schema.Types.ObjectId],
+    parts: IFormSchemaPart[],
+    footer: IField[][3], //field type PARAGRAPH!
+    header: IField[][5], // Exclude<FieldType, FieldType.TABLE, FieldType.SIGNATURE>
+    unitId: mongoose.Schema.Types.ObjectId,
+    isActive: Boolean,
+    version: Number,
+    forms: [mongoose.Schema.Types.ObjectId],
+}
+
+export interface IFormInstance {
+    id: mongoose.Schema.Types.ObjectId,
+    code: String,
+    displayName: String,
+    status: Status,
+    formSchemaId: mongoose.Schema.Types.ObjectId,
+    isSubmitterArchived: Boolean,
+    isActive: Boolean,
+    submittedBy: IUser,
+    submittedAt: Date,
+    answers: [any],
+    headerAnswers: [any],
+    processInstanceId: mongoose.Schema.Types.ObjectId,
+    approvers: [IApprover],
+}
+
+export interface SuccessMessage {
+    success: Boolean,
+    message: String,
 }
