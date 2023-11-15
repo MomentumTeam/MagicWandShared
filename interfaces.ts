@@ -108,57 +108,82 @@ export interface ICell {
 
 export interface IInstance {
     id: mongoose.Schema.Types.ObjectId,
-    code: String,
+    displayName: String,
+    serialNumber: String,
     status: Status,
     submittedBy: IUser,
-    submittedAt: Date,
     schemaId: mongoose.Schema.Types.ObjectId,
-    approver: IApprover,
-    isSubmitterArchived: Boolean,
-    forms: [mongoose.Schema.Types.ObjectId],
-    displayName: String,
-    isActive: Boolean,
-    answers: [any],
-    headerAnswers: [any],
-    processInstanceId: mongoose.Schema.Types.ObjectId,
-    approvers: [IApprover],
+    approvers: [IApprover]
 }
 
 export interface ISchema {
     id: mongoose.Schema.Types.ObjectId,
-    code: String,
-    type: FormSchemaType,
-    categoryId: mongoose.Schema.Types.ObjectId,
+    serialNumber: String,
     name: String,
-    createdAt: Date,
     createdBy: IUser,
     managersUniqueIds: [mongoose.Schema.Types.ObjectId],
     approversRoleIds: [mongoose.Schema.Types.ObjectId],
-    parts: IFormSchemaPart[],
-    footer: IField[][3], //field type PARAGRAPH!
-    header: IField[][5], // Exclude<FieldType, FieldType.TABLE, FieldType.SIGNATURE>
     unitId: mongoose.Schema.Types.ObjectId,
-    isActive: Boolean,
-    version: Number,
-    forms: [mongoose.Schema.Types.ObjectId],
 }
 
-export interface IFormInstance {
-    id: mongoose.Schema.Types.ObjectId,
-    code: String,
-    displayName: String,
+export interface IFormInstance extends IInstance {
     status: Status,
-    formSchemaId: mongoose.Schema.Types.ObjectId,
     isSubmitterArchived: Boolean,
     isActive: Boolean,
-    submittedBy: IUser,
     submittedAt: Date,
-    answers: [any],
-    headerAnswers: [any],
+    answers: mongoose.Schema.Types.Array,
+    headerAnswers: mongoose.Schema.Types.Array,
     processInstanceId: mongoose.Schema.Types.ObjectId,
+}
+
+export interface IProcessInstance extends IInstance {
+    status: Status,
+    submittedAt: Date,
+    isSubmitterArchived: Boolean,
+    forms: [mongoose.Schema.Types.ObjectId]
     approvers: [IApprover],
 }
 
+export interface ITempFormInstance extends IInstance {
+    answers: mongoose.Schema.Types.Array,
+    headerAnswers: mongoose.Schema.Types.Array,
+    processInstanceId: mongoose.Schema.Types.ObjectId,
+}
+
+export interface IFormSchema extends ISchema {
+    version: Number,
+    type: FormSchemaType,
+    categoryId: mongoose.Schema.Types.ObjectId,
+    createdBy: IUser
+    createdAt: Date,
+    parts: [IFormSchemaPart],
+    processSchemaId: mongoose.Schema.Types.ObjectId,
+    approversRoleIds: [mongoose.Schema.Types.ObjectId]
+    isActive: Boolean,
+    foot: {
+        type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>
+    }[][5],
+    footer: { type: IField, fieldType: FieldType.PARAGRAPH }[][3],
+    header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>}[][5],
+}
+
+export interface IProcessSchema extends ISchema {
+    version: Number,
+    categoryId: mongoose.Schema.Types.ObjectId,
+    createdAt: Date,
+    forms: [mongoose.Schema.Types.ObjectId]
+
+}
+
+export interface ITempFormSchema extends ISchema {
+    parts: [IFormSchemaPart],
+    footer: { type: FieldType.PARAGRAPH }[][3],
+    header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>}[][5],
+}
+
+export interface ITempProcessSchema extends ISchema {
+    forms: [mongoose.Schema.Types.ObjectId]
+}
 export interface SuccessMessage {
     success: Boolean,
     message: String,
