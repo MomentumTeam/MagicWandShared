@@ -60,11 +60,10 @@ export interface IField {
 export interface IUser {
     firstName: String
     lastName: String
-    identityCard: String
     hierarchy: String
     unitId: String
     uniqueId: mongoose.Schema.Types.ObjectId
-    personalNumber: String
+    identifier: String
 }
 
 export interface IFormSchemaObject {
@@ -124,6 +123,7 @@ export interface ISchema {
     managersUniqueIds: [mongoose.Schema.Types.ObjectId],
     approversRoleIds: [mongoose.Schema.Types.ObjectId],
     unitId: mongoose.Schema.Types.ObjectId,
+    categoryId: mongoose.Schema.Types.ObjectId
 }
 
 export interface IFormInstance extends IInstance {
@@ -144,10 +144,14 @@ export interface IProcessInstance extends IInstance {
     approvers: [IApprover],
 }
 
-export interface ITempFormInstance extends IInstance {
+export interface IDraftFormInstance extends IInstance {
     answers: mongoose.Schema.Types.Array,
     headerAnswers: mongoose.Schema.Types.Array,
     processInstanceId: mongoose.Schema.Types.ObjectId,
+}
+
+export interface IDraftProcessInstance extends IInstance {
+    forms: [mongoose.Schema.Types.ObjectId]
 }
 
 export interface IFormSchema extends ISchema {
@@ -165,6 +169,7 @@ export interface IFormSchema extends ISchema {
     }[][5],
     footer: { type: IField, fieldType: FieldType.PARAGRAPH }[][3],
     header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>}[][5],
+    grettingMessage: String
 }
 
 export interface IProcessSchema extends ISchema {
@@ -175,13 +180,14 @@ export interface IProcessSchema extends ISchema {
 
 }
 
-export interface ITempFormSchema extends ISchema {
+export interface IDraftFormSchema extends ISchema {
     parts: [IFormSchemaPart],
     footer: { type: FieldType.PARAGRAPH }[][3],
     header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>}[][5],
+    grettingMessage: String
 }
 
-export interface ITempProcessSchema extends ISchema {
+export interface IDraftProcessSchema extends ISchema {
     forms: [mongoose.Schema.Types.ObjectId]
 }
 export interface SuccessMessage {
