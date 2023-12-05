@@ -17,6 +17,7 @@ export enum FieldType {
     DATE
 }
 
+
 export enum RoleType {
     UNIT,
     BASIC

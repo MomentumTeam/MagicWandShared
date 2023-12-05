@@ -76,11 +76,12 @@ export interface IFormInstanceObject {
     nextFormInstanceObject: IFormInstanceObject
 }
 
-export interface IApprover {
+export interface IApproverStage {
     status: ApproverStatus
     roleId: mongoose.Schema.Types.ObjectId
     reason: String
     user: IUser
+    updatedAt: Date
 }
 
 export interface IColumnTable {
@@ -112,7 +113,7 @@ export interface IInstance {
     status: Status,
     submittedBy: IUser,
     schemaId: mongoose.Schema.Types.ObjectId,
-    approvers: [IApprover]
+    approverStages: [IApproverStage]
 }
 
 export interface ISchema {
@@ -141,7 +142,7 @@ export interface IProcessInstance extends IInstance {
     submittedAt: Date,
     isSubmitterArchived: Boolean,
     forms: [mongoose.Schema.Types.ObjectId]
-    approvers: [IApprover],
+    approverStages: [IApproverStage],
 }
 
 export interface IDraftFormInstance extends IInstance {
