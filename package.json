@@ -1,5 +1,10 @@
 {
+  "name": "@momentumteam/magic-wand-shared",
+  "version": "1.0.0",
   "dependencies": {
     "mongoose": "^8.0.0"
+  },
+  "scripts": {
+    "update": "npm version patch && npm publish --access restricted"
   }
 }
