@@ -1,6 +1,6 @@
 {
   "name": "@momentumteam/magic-wand-shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
