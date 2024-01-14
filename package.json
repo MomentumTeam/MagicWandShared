@@ -4,6 +4,6 @@
     "mongoose": "^8.0.0"
   },
   "scripts": {
-    "release": "npm version patch --no-git-tag-version && git add package.json && git commit -m \"Update to version $(node -p -e \"require('./package.json').version\")\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
+    "release": "npm version patch --no-git-tag-version && git add -A && git commit -m \"Update to version $(node -p -e \"require('./package.json').version\")\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
   }
 }
