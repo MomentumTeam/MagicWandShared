@@ -112,8 +112,8 @@ export interface IFormInstance extends IInstance {
   isSubmitterArchived: Boolean;
   isActive: Boolean;
   submittedAt: Date;
-  answers: mongoose.Schema.Types.Array;
-  headerAnswers: mongoose.Schema.Types.Array;
+  answers: any[];
+  headerAnswers: any[];
   processInstanceId: mongoose.Schema.Types.ObjectId;
 }
 
@@ -126,8 +126,8 @@ export interface IProcessInstance extends IInstance {
 }
 
 export interface IDraftFormInstance extends IInstance {
-  answers: mongoose.Schema.Types.Array;
-  headerAnswers: mongoose.Schema.Types.Array;
+  answers: any[];
+  headerAnswers: any[];
   processInstanceId: mongoose.Schema.Types.ObjectId;
 }
 
@@ -142,6 +142,7 @@ export interface IFormSchema extends ISchema {
   createdBy: IUser;
   createdAt: Date;
   parts: [IFormSchemaPart];
+  sc
   processSchemaId: mongoose.Schema.Types.ObjectId;
   approversRoleIds: [mongoose.Schema.Types.ObjectId];
   isActive: Boolean;
