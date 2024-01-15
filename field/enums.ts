@@ -30,13 +30,13 @@ export enum TextFieldSize {
 }
 
 export enum IdentifierFieldType {
-    IDENTITY_CARD,
-    PERSONAL_NUMBER
+    IDENTITY_CARD = "IDENTITY_CARD",
+    PERSONAL_NUMBER = "PERSONAL_NUMBER"
 }
 
 export enum DateFieldRestrictionType {
-    PAST,
-    FUTURE
+    PAST = "PAST",
+    FUTURE = "FUTURE"
 }
 
 export enum DateFieldFormat {
