@@ -112,8 +112,8 @@ export interface IFormInstance extends IInstance {
   isSubmitterArchived: Boolean;
   isActive: Boolean;
   submittedAt: Date;
-  answers: any[];
-  headerAnswers: any[];
+  answers: mongoose.Schema.Types.Mixed[];
+  headerAnswers: mongoose.Schema.Types.Mixed[];
   processInstanceId: mongoose.Schema.Types.ObjectId;
 }
 
@@ -126,8 +126,8 @@ export interface IProcessInstance extends IInstance {
 }
 
 export interface IDraftFormInstance extends IInstance {
-  answers: any[];
-  headerAnswers: any[];
+  answers: mongoose.Schema.Types.Mixed[];
+  headerAnswers: mongoose.Schema.Types.Mixed[];
   processInstanceId: mongoose.Schema.Types.ObjectId;
 }
 
