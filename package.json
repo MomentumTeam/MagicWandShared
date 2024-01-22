@@ -1,6 +1,6 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "dependencies": {
     "magicwand-shared": "github:MomentumTeam/MagicWandShared#v1.0.15",
     "mongoose": "^8.0.0"
