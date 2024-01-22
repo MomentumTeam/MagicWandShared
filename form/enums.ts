@@ -43,6 +43,8 @@ export enum ValidationsFields {
     options = "options",
     uniqueTitle = "uniqueTitle",
     columns = "columns",
+    hasOther = "hasOther",
+
 }
 
 export enum CellValidationsFields {
