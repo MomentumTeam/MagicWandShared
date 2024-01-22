@@ -44,3 +44,14 @@ export enum ValidationsFields {
     uniqueTitle = "uniqueTitle",
     columns = "columns",
 }
+
+export enum CellValidationsFields {
+    required = "required",
+    locked = "locked",
+}
+
+export enum ColumnValidationsFields {
+    type = "type",
+    titleCell = "titleCell",
+}
+
