@@ -25,3 +25,8 @@ export enum Rank {
     "תאל",
     "לא ידוע"
 }
+
+export enum TemplateType {
+    SECTION = "SECTION",
+    FIELD = "FIELD",
+}

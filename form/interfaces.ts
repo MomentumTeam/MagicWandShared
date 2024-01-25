@@ -1,21 +1,21 @@
 import mongoose from 'mongoose';
 import {
-  CheckboxFieldParams,
-  DateFieldParams,
-  DropdownFieldParams,
-  FileFieldParams,
-  HeadlineFieldParams,
-  IdentifierFieldParams,
-  ListFieldParams,
-  LogoFieldParams,
-  NumberFieldParams,
-  ParagraphFieldParams,
-  PhoneFieldParams,
-  RadioFieldParams,
-  SignatureFieldParams,
-  TableFieldParams,
-  TextFieldParams,
-  TimeFieldParams,
+  ICheckboxFieldParams,
+  IDateFieldParams,
+  IDropdownFieldParams,
+  IFileFieldParams,
+  IHeadlineFieldParams,
+  IIdentifierFieldParams,
+  IListFieldParams,
+  ILogoFieldParams,
+  INumberFieldParams,
+  IParagraphFieldParams,
+  IPhoneFieldParams,
+  IRadioFieldParams,
+  ISignatureFieldParams,
+  ITableFieldParams,
+  ITextFieldParams,
+  ITimeFieldParams,
 } from '../field/interfaces';
 import { FieldType } from '../field/enums';
 import { ApproverStatus, FormSchemaType, SectionPartType, Status } from './enums';
@@ -41,22 +41,22 @@ export interface ISectionPart {
 export interface IField {
   type: Exclude<FieldType, FieldType.LOGO>;
   fieldParams:
-    | ParagraphFieldParams
-    | HeadlineFieldParams
-    | ListFieldParams
-    | LogoFieldParams
-    | TextFieldParams
-    | SignatureFieldParams
-    | IdentifierFieldParams
-    | DateFieldParams
-    | TimeFieldParams
-    | NumberFieldParams
-    | CheckboxFieldParams
-    | RadioFieldParams
-    | DropdownFieldParams
-    | TableFieldParams
-    | FileFieldParams
-    | PhoneFieldParams;
+    | IParagraphFieldParams
+    | IHeadlineFieldParams
+    | IListFieldParams
+    | ILogoFieldParams
+    | ITextFieldParams
+    | ISignatureFieldParams
+    | IIdentifierFieldParams
+    | IDateFieldParams
+    | ITimeFieldParams
+    | INumberFieldParams
+    | ICheckboxFieldParams
+    | IRadioFieldParams
+    | IDropdownFieldParams
+    | ITableFieldParams
+    | IFileFieldParams
+    | IPhoneFieldParams;
 }
 
 export interface IUser {
@@ -142,7 +142,6 @@ export interface IFormSchema extends ISchema {
   createdBy: IUser;
   createdAt: Date;
   parts: [IFormSchemaPart];
-  sc
   processSchemaId: mongoose.Schema.Types.ObjectId;
   approversRoleIds: [mongoose.Schema.Types.ObjectId];
   isActive: Boolean;

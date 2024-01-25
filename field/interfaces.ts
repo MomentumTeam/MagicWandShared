@@ -13,25 +13,25 @@ import {
 import { LogoType } from '../logo/enums';
 import { IField } from '../form/interfaces';
 
-export interface ParagraphFieldParams {
+export interface IParagraphFieldParams {
   text: String;
 }
 
-export interface HeadlineFieldParams {
+export interface IHeadlineFieldParams {
   text: String;
 }
 
-export interface ListFieldParams {
+export interface IListFieldParams {
   title: HtmlString;
   items: HtmlString[];
   itemMarker: ListFieldItemMarker;
 }
 
-export interface LogoFieldParams {
+export interface ILogoFieldParams {
   logoType: LogoType;
 }
 
-export interface TextFieldParams {
+export interface ITextFieldParams {
   required: Boolean;
   title: HtmlString;
   description: String;
@@ -40,19 +40,20 @@ export interface TextFieldParams {
   maxLength: Number;
 }
 
-export interface SignatureFieldParams {
+export interface ISignatureFieldParams {
   required: Boolean;
   title: HtmlString;
 }
 
-export interface IdentifierFieldParams {
+export interface IIdentifierFieldParams {
   required: Boolean;
   title: HtmlString;
   description: String;
   identifierType: IdentifierFieldType;
+  autoComplete: Boolean;
 }
 
-export interface DateFieldParams {
+export interface IDateFieldParams {
   required: Boolean;
   title: HtmlString;
   description: String;
@@ -61,7 +62,7 @@ export interface DateFieldParams {
   dateFormat: DateFieldFormat;
 }
 
-export interface TimeFieldParams {
+export interface ITimeFieldParams {
   title: HtmlString;
   description: String;
   required: Boolean;
@@ -69,7 +70,7 @@ export interface TimeFieldParams {
   timeFormat: TimeFieldFormat;
 }
 
-export interface NumberFieldParams {
+export interface INumberFieldParams {
   title: HtmlString;
   description: String;
   required: Boolean;
@@ -77,7 +78,7 @@ export interface NumberFieldParams {
   maxValue: Number;
 }
 
-export interface CheckboxFieldParams {
+export interface ICheckboxFieldParams {
   title: HtmlString;
   required: Boolean;
   options: HtmlString[];
@@ -86,7 +87,7 @@ export interface CheckboxFieldParams {
   layout: OptionsLayout;
 }
 
-export interface RadioFieldParams {
+export interface IRadioFieldParams {
   title: HtmlString;
   required: Boolean;
   options: HtmlString[];
@@ -95,7 +96,7 @@ export interface RadioFieldParams {
   layout: OptionsLayout;
 }
 
-export interface DropdownFieldParams {
+export interface IDropdownFieldParams {
   title: HtmlString;
   required: Boolean;
   options: HtmlString[];
@@ -123,7 +124,7 @@ export interface IColumn {
   cells: ICell[];
 }
 
-export interface TableFieldParams {
+export interface ITableFieldParams {
   title: HtmlString;
   required: Boolean;
   onlyForView: Boolean;
@@ -131,13 +132,14 @@ export interface TableFieldParams {
   columns: IColumn[];
 }
 
-export interface FileFieldParams {
+export interface IFileFieldParams {
   title: HtmlString;
   required: Boolean;
   description: String;
 }
 
-export interface PhoneFieldParams {
+export interface IPhoneFiel
+dParams {
   title: HtmlString;
   required: Boolean;
   description: String;
