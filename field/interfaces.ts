@@ -138,8 +138,7 @@ export interface IFileFieldParams {
   description: String;
 }
 
-export interface IPhoneFiel
-dParams {
+export interface IPhoneFieldParams {
   title: HtmlString;
   required: Boolean;
   description: String;
