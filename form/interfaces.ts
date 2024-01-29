@@ -34,8 +34,8 @@ export interface ISection {
 
 export interface ISectionPart {
   type: SectionPartType;
-  field: IField;
-  section: ISection;
+  field?: IField;
+  section?: ISection;
 }
 
 export interface IField {
