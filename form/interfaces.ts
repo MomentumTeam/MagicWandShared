@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 import {
   ICheckboxFieldParams,
   IDateFieldParams,
@@ -16,9 +16,15 @@ import {
   ITableFieldParams,
   ITextFieldParams,
   ITimeFieldParams,
-} from '../field/interfaces';
-import { FieldType } from '../field/enums';
-import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from './enums';
+} from "../field/interfaces";
+import { FieldType } from "../field/enums";
+import {
+  ApproverStatus,
+  FormSchemaPartType,
+  FormSchemaType,
+  SectionPartType,
+  Status,
+} from "./enums";
 
 export interface IFormSchemaPart {
   type: FormSchemaPartType;
@@ -41,22 +47,22 @@ export interface ISectionPart {
 export interface IField {
   fieldType: FieldType;
   fieldParams:
-  IParagraphFieldParams
-  | IHeadlineFieldParams
-  | IListFieldParams
-  | ILogoFieldParams
-  | ITextFieldParams
-  | ISignatureFieldParams
-  | IIdentifierFieldParams
-  | IDateFieldParams
-  | ITimeFieldParams
-  | INumberFieldParams
-  | ICheckboxFieldParams
-  | IRadioFieldParams
-  | IDropdownFieldParams
-  | ITableFieldParams
-  | IFileFieldParams
-  | IPhoneFieldParams
+    | IParagraphFieldParams
+    | IHeadlineFieldParams
+    | IListFieldParams
+    | ILogoFieldParams
+    | ITextFieldParams
+    | ISignatureFieldParams
+    | IIdentifierFieldParams
+    | IDateFieldParams
+    | ITimeFieldParams
+    | INumberFieldParams
+    | ICheckboxFieldParams
+    | IRadioFieldParams
+    | IDropdownFieldParams
+    | ITableFieldParams
+    | IFileFieldParams
+    | IPhoneFieldParams;
 }
 
 export interface ISectionField extends IField {
