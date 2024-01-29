@@ -18,10 +18,10 @@ import {
   ITimeFieldParams,
 } from '../field/interfaces';
 import { FieldType } from '../field/enums';
-import { ApproverStatus, FormSchemaType, SectionPartType, Status } from './enums';
+import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from './enums';
 
 export interface IFormSchemaPart {
-  type: FormSchemaType;
+  type: FormSchemaPartType;
   section?: ISection;
 }
 
