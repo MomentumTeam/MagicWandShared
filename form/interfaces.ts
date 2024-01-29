@@ -39,24 +39,38 @@ export interface ISectionPart {
 }
 
 export interface IField {
-  type: Exclude<FieldType, FieldType.LOGO>;
+  fieldType: FieldType;
   fieldParams:
-    | IParagraphFieldParams
-    | IHeadlineFieldParams
-    | IListFieldParams
-    | ILogoFieldParams
-    | ITextFieldParams
-    | ISignatureFieldParams
-    | IIdentifierFieldParams
-    | IDateFieldParams
-    | ITimeFieldParams
-    | INumberFieldParams
-    | ICheckboxFieldParams
-    | IRadioFieldParams
-    | IDropdownFieldParams
-    | ITableFieldParams
-    | IFileFieldParams
-    | IPhoneFieldParams;
+  {
+    [FieldType.PARAGRAPH]: IParagraphFieldParams
+    [FieldType.HEADLINE]: IHeadlineFieldParams
+    [FieldType.LIST]: IListFieldParams
+    [FieldType.LOGO]: ILogoFieldParams
+    [FieldType.TEXT]: ITextFieldParams
+    [FieldType.SIGNATURE]: ISignatureFieldParams
+    [FieldType.IDENTIFIER]: IIdentifierFieldParams
+    [FieldType.DATE]: IDateFieldParams
+    [FieldType.TIME]: ITimeFieldParams
+    [FieldType.NUMBER]: INumberFieldParams
+    [FieldType.CHECKBOX]: ICheckboxFieldParams
+    [FieldType.RADIO]: IRadioFieldParams
+    [FieldType.DROPDOWN]: IDropdownFieldParams
+    [FieldType.TABLE]: ITableFieldParams
+    [FieldType.FILE]: IFileFieldParams
+    [FieldType.PHONE]: IPhoneFieldParams
+  }
+}
+
+export interface ISectionField extends IField {
+  fieldType: Exclude<FieldType, FieldType.LOGO>;
+}
+
+export interface IHeaderField extends IField {
+  fieldType: Exclude<Exclude<FieldType, FieldType.TABLE>, FieldType.SIGNATURE>;
+}
+
+export interface IFooterField extends IField {
+  fieldType: FieldType.PARAGRAPH;
 }
 
 export interface IUser {
