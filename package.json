@@ -1,5 +1,6 @@
 {
   "name": "magicwand-shared",
+  "type": "module",
   "version": "1.0.18",
   "dependencies": {
     "magicwand-shared": "github:MomentumTeam/MagicWandShared#v1.0.15",
