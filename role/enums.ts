@@ -1,4 +1,4 @@
 export enum RoleType {
-    UNIT,
-    BASIC
+  UNIT = "UNIT",
+  BASIC = "BASIC",
 }
