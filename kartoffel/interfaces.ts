@@ -24,7 +24,7 @@ export interface IDigitalIdentity {
   upn?: string | undefined;
 }
 
-export interface IUser {
+export interface IKartoffelUser {
   _id?: string;
   id: string;
   displayName: string;

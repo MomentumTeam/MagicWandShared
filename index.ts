@@ -1,9 +1,15 @@
-export * from './field/enums';
-export * from './field/interfaces';
-export * from './form/enums';
-export * from './form/interfaces';
-export * from './logo/enums';
-export * from './category/interfaces';
-export * from './permission/enums';
-export * from './role/enums';
-export * from './template/enums';
+//interfaces
+export * from "./field/interfaces";
+export * from "./form/interfaces";
+export * from "./category/interfaces";
+export * from "./authentication/interfaces";
+export * from "./kartoffel/interfaces";
+export * from "./permission/interfaces";
+export * from "./unit/interfaces";
+
+//enums
+export * from "./permission/enums";
+export * from "./role/enums";
+export * from "./template/enums";
+export * from "./form/enums";
+export * from "./field/enums";
