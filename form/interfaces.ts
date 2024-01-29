@@ -22,14 +22,14 @@ import { ApproverStatus, FormSchemaType, SectionPartType, Status } from './enums
 
 export interface IFormSchemaPart {
   type: FormSchemaType;
-  section: ISection;
+  section?: ISection;
 }
 
 export interface ISection {
   parts: ISectionPart[];
-  approverRoleId: mongoose.Schema.Types.ObjectId;
-  hasBorder: boolean;
-  title: string;
+  approverRoleId?: mongoose.Schema.Types.ObjectId;
+  hasBorder?: boolean;
+  title?: string;
 }
 
 export interface ISectionPart {
