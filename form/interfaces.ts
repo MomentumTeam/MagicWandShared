@@ -41,24 +41,22 @@ export interface ISectionPart {
 export interface IField {
   fieldType: FieldType;
   fieldParams:
-  {
-    [FieldType.PARAGRAPH]: IParagraphFieldParams
-    [FieldType.HEADLINE]: IHeadlineFieldParams
-    [FieldType.LIST]: IListFieldParams
-    [FieldType.LOGO]: ILogoFieldParams
-    [FieldType.TEXT]: ITextFieldParams
-    [FieldType.SIGNATURE]: ISignatureFieldParams
-    [FieldType.IDENTIFIER]: IIdentifierFieldParams
-    [FieldType.DATE]: IDateFieldParams
-    [FieldType.TIME]: ITimeFieldParams
-    [FieldType.NUMBER]: INumberFieldParams
-    [FieldType.CHECKBOX]: ICheckboxFieldParams
-    [FieldType.RADIO]: IRadioFieldParams
-    [FieldType.DROPDOWN]: IDropdownFieldParams
-    [FieldType.TABLE]: ITableFieldParams
-    [FieldType.FILE]: IFileFieldParams
-    [FieldType.PHONE]: IPhoneFieldParams
-  }
+  IParagraphFieldParams
+  | IHeadlineFieldParams
+  | IListFieldParams
+  | ILogoFieldParams
+  | ITextFieldParams
+  | ISignatureFieldParams
+  | IIdentifierFieldParams
+  | IDateFieldParams
+  | ITimeFieldParams
+  | INumberFieldParams
+  | ICheckboxFieldParams
+  | IRadioFieldParams
+  | IDropdownFieldParams
+  | ITableFieldParams
+  | IFileFieldParams
+  | IPhoneFieldParams
 }
 
 export interface ISectionField extends IField {
