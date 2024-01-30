@@ -3,7 +3,8 @@
   "version": "1.0.25",
   "dependencies": {
     "magicwand-shared": "github:MomentumTeam/MagicWandShared#v1.0.15",
-    "mongoose": "^8.0.0"
+    "mongoose": "^8.0.0",
+    "tsc": "^2.0.4"
   },
   "scripts": {
     "release": "npm version patch --no-git-tag-version && git add -A && git commit -m \"$npm_config_message\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
