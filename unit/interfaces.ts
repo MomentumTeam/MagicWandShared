@@ -1,21 +1,21 @@
 import mongoose from "mongoose";
 
 export interface IUnit {
-  _id: mongoose.Schema.Types.ObjectId;
+  _id: mongoose.Types.ObjectId;
   name: string;
-  kartoffelGroupIds: mongoose.Schema.Types.ObjectId[];
+  kartoffelGroupIds: mongoose.Types.ObjectId[];
 }
 
 export type INewUnit = Omit<IUnit, "_id">;
 
 export interface IAddToKartoffelGroupId {
-  id?: mongoose.Schema.Types.ObjectId;
+  id?: mongoose.Types.ObjectId;
   name?: string;
-  kartoffelGroupId: mongoose.Schema.Types.ObjectId;
+  kartoffelGroupId: mongoose.Types.ObjectId;
 }
 
 export interface IRemoveFromKartoffelGroupId {
-  id?: mongoose.Schema.Types.ObjectId;
+  id?: mongoose.Types.ObjectId;
   name?: string;
-  kartoffelGroupId: mongoose.Schema.Types.ObjectId;
+  kartoffelGroupId: mongoose.Types.ObjectId;
 }

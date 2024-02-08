@@ -2,15 +2,15 @@ import mongoose from "mongoose";
 import { RoleType, Rank } from "./enums";
 
 export interface IRole {
-  _id: mongoose.Schema.Types.ObjectId;
-  unitId: mongoose.Schema.Types.ObjectId;
-  name: string;
-  isStaffed: boolean;
+  _id: mongoose.Types.ObjectId;
+  unitId?: mongoose.Types.ObjectId;
+  name?: string;
+  isStaffed?: boolean;
   type: RoleType;
-  basicRoleId: mongoose.Schema.Types.ObjectId;
-  isActive: boolean;
-  ranks: Rank[];
-  uniqueIds: string[];
+  basicRoleId?: mongoose.Types.ObjectId;
+  isActive?: boolean;
+  ranks?: Rank[];
+  uniqueIds?: string[];
 }
 
 export type INewRole = Omit<IRole, "_id">;
