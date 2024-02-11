@@ -138,4 +138,4 @@ export interface IPhoneFieldParams {
     required?: boolean;
     description?: string;
 }
-export type HtmlString = String;
+export type HtmlString = string;

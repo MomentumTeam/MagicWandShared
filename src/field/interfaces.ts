@@ -144,4 +144,4 @@ export interface IPhoneFieldParams {
   description?: string;
 }
 
-export type HtmlString = String;
+export type HtmlString = string;
