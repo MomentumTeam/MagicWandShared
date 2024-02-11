@@ -12,6 +12,7 @@
   "description": "After making changes run: npm run release --message='Your commit message'",
   "types": "./dist/index.d.ts",
   "devDependencies": {
+    "@types/node": "^20.11.17",
     "typescript": "^5.3.3"
   },
   "author": "",

@@ -19,7 +19,7 @@ export interface IDigitalIdentity {
   entityId: string;
   createdAt: Date;
   updatedAt: Date;
-  isRoleAttachable: Boolean;
+  isRoleAttachable: boolean;
   role?: Role | undefined;
   upn?: string | undefined;
 }

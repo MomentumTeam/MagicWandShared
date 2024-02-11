@@ -1,4 +1,4 @@
-import { IField, ISection } from "magicwand-shared";
+import { IField, ISection } from "../form/interfaces";
 import { TemplateType } from "./enums";
 
 export interface ITemplate {
