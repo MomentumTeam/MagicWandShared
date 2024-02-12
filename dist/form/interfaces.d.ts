@@ -74,8 +74,8 @@ export interface ISchema {
 }
 export interface IFormInstance extends IInstance {
     status: Status;
-    isSubmitterArchived: Boolean;
-    isActive: Boolean;
+    isSubmitterArchived: boolean;
+    isActive: boolean;
     submittedAt: Date;
     answers: mongoose.Schema.Types.Mixed[];
     headerAnswers: mongoose.Schema.Types.Mixed[];
@@ -84,7 +84,7 @@ export interface IFormInstance extends IInstance {
 export interface IProcessInstance extends IInstance {
     status: Status;
     submittedAt: Date;
-    isSubmitterArchived: Boolean;
+    isSubmitterArchived: boolean;
     forms: [mongoose.Schema.Types.ObjectId];
     approverStages: [IApproverStage];
 }
@@ -97,15 +97,18 @@ export interface IDraftProcessInstance extends IInstance {
     forms: [mongoose.Schema.Types.ObjectId];
 }
 export interface IFormSchema extends ISchema {
-    version: Number;
+    version: number;
     type: FormSchemaType;
     categoryId: mongoose.Schema.Types.ObjectId;
     createdBy: IUser;
     createdAt: Date;
     parts: [IFormSchemaPart];
     processSchemaId: mongoose.Schema.Types.ObjectId;
-    approversRoleIds: mongoose.Schema.Types.ObjectId[];
-    isActive: Boolean;
+    approversRoleIds: [mongoose.Schema.Types.ObjectId];
+    isActive: boolean;
+    foot: {
+        type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
+    }[][5];
     footer: (null | {
         type: IField;
         fieldType: FieldType.PARAGRAPH;
@@ -113,10 +116,10 @@ export interface IFormSchema extends ISchema {
     header: (null | {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
     })[][5];
-    greetingMessage?: string;
+    grettingMessage: string;
 }
 export interface IProcessSchema extends ISchema {
-    version: Number;
+    version: number;
     categoryId: mongoose.Schema.Types.ObjectId;
     createdAt: Date;
     forms: [mongoose.Schema.Types.ObjectId];
@@ -129,12 +132,12 @@ export interface IDraftFormSchema extends ISchema {
     header: {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
     }[][5];
-    greetingMessage: string;
+    grettingMessage: string;
 }
 export interface IDraftProcessSchema extends ISchema {
     forms: [mongoose.Schema.Types.ObjectId];
 }
 export interface SuccessMessage {
-    success: Boolean;
+    success: boolean;
     message: string;
 }

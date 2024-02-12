@@ -1,6 +1,6 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.33",
+  "version": "1.0.37",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
@@ -10,8 +10,10 @@
     "release": "npm run build && git add -A && npm version patch --no-git-tag-version && git commit -m \"$npm_config_message\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
   },
   "description": "After making changes run: npm run release --message='Your commit message'",
+  "main": "./dist/index.d.ts",
   "types": "./dist/index.d.ts",
   "devDependencies": {
+    "@types/node": "^20.11.17",
     "typescript": "^5.3.3"
   },
   "author": "",
