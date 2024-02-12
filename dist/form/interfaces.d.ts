@@ -67,8 +67,8 @@ export interface ISchema {
     serialNumber: string;
     name: string;
     createdBy: IUser;
-    managersUniqueIds: mongoose.Schema.Types.ObjectId[];
-    approversRoleIds: mongoose.Schema.Types.ObjectId[];
+    managersUniqueIds: [mongoose.Schema.Types.ObjectId];
+    approversRoleIds: [mongoose.Schema.Types.ObjectId];
     unitId: mongoose.Schema.Types.ObjectId;
     categoryId: mongoose.Schema.Types.ObjectId;
 }
@@ -109,13 +109,13 @@ export interface IFormSchema extends ISchema {
     foot: {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
     }[][5];
-    footer: (null | {
+    footer: {
         type: IField;
         fieldType: FieldType.PARAGRAPH;
-    })[][3];
-    header: (null | {
+    }[][3];
+    header: {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-    })[][5];
+    }[][5];
     grettingMessage: string;
 }
 export interface IProcessSchema extends ISchema {
@@ -141,3 +141,4 @@ export interface SuccessMessage {
     success: boolean;
     message: string;
 }
+export { Status, ApproverStatus, FieldType };

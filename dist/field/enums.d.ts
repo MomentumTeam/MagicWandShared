@@ -42,8 +42,8 @@ export declare enum DateFieldFormat {
     HEBREW_DATE = "HEBREW"
 }
 export declare enum TimeFieldFormat {
-    "12H" = "12H",
-    "24H" = "24H"
+    twelveHoursFormat = "12H",
+    twentyFourHoursFormat = "24H"
 }
 export declare enum OptionsLayout {
     COLUMN = "COLUMN",
