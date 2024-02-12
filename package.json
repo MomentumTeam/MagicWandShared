@@ -1,6 +1,6 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.33",
+  "version": "1.0.35",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
@@ -13,6 +13,7 @@
   "main": "./dist/index.d.ts",
   "types": "./dist/index.d.ts",
   "devDependencies": {
+    "@types/node": "^20.11.17",
     "typescript": "^5.3.3"
   },
   "author": "",

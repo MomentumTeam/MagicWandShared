@@ -1,11 +1,35 @@
+/// <reference types="mongoose/types/aggregate" />
+/// <reference types="mongoose/types/callback" />
+/// <reference types="mongoose/types/collection" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/expressions" />
+/// <reference types="mongoose/types/helpers" />
+/// <reference types="mongoose/types/middlewares" />
+/// <reference types="mongoose/types/indexes" />
+/// <reference types="mongoose/types/models" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/populate" />
+/// <reference types="mongoose/types/query" />
+/// <reference types="mongoose/types/schemaoptions" />
+/// <reference types="mongoose/types/schematypes" />
+/// <reference types="mongoose/types/session" />
+/// <reference types="mongoose/types/types" />
+/// <reference types="mongoose/types/utility" />
+/// <reference types="mongoose/types/validation" />
+/// <reference types="mongoose/types/virtuals" />
+/// <reference types="mongoose/types/inferschematype" />
 import mongoose from 'mongoose';
 import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
 import { IField } from "../form/interfaces";
 export interface IParagraphFieldParams {
-    text: String;
+    text: string;
 }
 export interface IHeadlineFieldParams {
-    text: String;
+    text: string;
 }
 export interface IListFieldParams {
     items: HtmlString[];
@@ -17,101 +41,101 @@ export interface ILogoFieldParams {
 }
 export interface ITextFieldParams {
     size: TextFieldSize;
-    required?: Boolean;
+    required?: boolean;
     title?: HtmlString;
-    description?: String;
-    minLength?: Number;
-    maxLength?: Number;
+    description?: string;
+    minLength?: number;
+    maxLength?: number;
 }
 export interface ISignatureFieldParams {
-    required?: Boolean;
+    required?: boolean;
     title?: HtmlString;
 }
 export interface IIdentifierFieldParams {
     identifierType: IdentifierFieldType;
-    required?: Boolean;
+    required?: boolean;
     title?: HtmlString;
-    description?: String;
-    autoComplete?: Boolean;
+    description?: string;
+    autoComplete?: boolean;
 }
 export interface IDateFieldParams {
     dateFormat: DateFieldFormat;
-    required?: Boolean;
+    required?: boolean;
     title?: HtmlString;
-    description?: String;
-    autoComplete?: Boolean;
+    description?: string;
+    autoComplete?: boolean;
     dateRestriction?: DateFieldRestrictionType;
 }
 export interface ITimeFieldParams {
     timeFormat: TimeFieldFormat;
     title?: HtmlString;
-    description?: String;
-    required?: Boolean;
-    autoComplete?: Boolean;
+    description?: string;
+    required?: boolean;
+    autoComplete?: boolean;
 }
 export interface INumberFieldParams {
     title?: HtmlString;
-    description?: String;
-    required?: Boolean;
-    minValue?: Number;
-    maxValue?: Number;
+    description?: string;
+    required?: boolean;
+    minValue?: number;
+    maxValue?: number;
 }
 export interface ICheckboxFieldParams {
     options: HtmlString[];
     layout: OptionsLayout;
     title?: HtmlString;
-    required?: Boolean;
-    hasOther?: Boolean;
-    canFillOther?: Boolean;
+    required?: boolean;
+    hasOther?: boolean;
+    canFillOther?: boolean;
 }
 export interface IRadioFieldParams {
     options: HtmlString[];
     layout: OptionsLayout;
     title?: HtmlString;
-    required?: Boolean;
-    hasOther?: Boolean;
-    canFillOther?: Boolean;
+    required?: boolean;
+    hasOther?: boolean;
+    canFillOther?: boolean;
 }
 export interface IDropdownFieldParams {
     options: HtmlString[];
     layout: OptionsLayout;
     title?: HtmlString;
-    required?: Boolean;
+    required?: boolean;
 }
 export interface ICell {
     alignment: TableFieldCellAlignment;
-    defaultValue?: String;
-    locked?: Boolean;
-    required?: Boolean;
-    bold?: Boolean;
+    defaultValue?: string;
+    locked?: boolean;
+    required?: boolean;
+    bold?: boolean;
     backgroundColor?: TableFieldCellBackgroundColor;
-    mergeRight?: Boolean;
-    mergeDown?: Boolean;
+    mergeRight?: boolean;
+    mergeDown?: boolean;
 }
 export interface IColumn {
     cells: ICell[];
     titleCell: ICell;
     type: ColumnType;
     field?: IField;
-    minValue?: Number;
-    maxValue?: Number;
-    options?: String[];
+    minValue?: number;
+    maxValue?: number;
+    options?: string[];
 }
 export interface ITableFieldParams {
     columns: IColumn[];
     title?: HtmlString;
-    required?: Boolean;
-    onlyForView?: Boolean;
-    canAddRows?: Boolean;
+    required?: boolean;
+    onlyForView?: boolean;
+    canAddRows?: boolean;
 }
 export interface IFileFieldParams {
     title?: HtmlString;
-    required?: Boolean;
-    description?: String;
+    required?: boolean;
+    description?: string;
 }
 export interface IPhoneFieldParams {
     title?: HtmlString;
-    required?: Boolean;
-    description?: String;
+    required?: boolean;
+    description?: string;
 }
-export type HtmlString = String;
+export type HtmlString = string;
