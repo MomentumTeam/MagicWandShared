@@ -78,12 +78,12 @@ export interface IFooterField extends IField {
 }
 
 export interface IUser {
-  firstName: String;
-  lastName: String;
-  hierarchy: String;
-  unitId: String;
+  firstName: string;
+  lastName: string;
+  hierarchy: string;
+  unitId: string;
   uniqueId: mongoose.Schema.Types.ObjectId;
-  identifier: String;
+  identifier: string;
 }
 
 export interface IFormSchemaObject {
@@ -99,15 +99,15 @@ export interface IFormInstanceObject {
 export interface IApproverStage {
   status: ApproverStatus;
   roleId: mongoose.Schema.Types.ObjectId;
-  reason: String;
+  reason: string;
   user: IUser;
   updatedAt: Date;
 }
 
 export interface IInstance {
   id: mongoose.Schema.Types.ObjectId;
-  displayName: String;
-  serialNumber: String;
+  displayName: string;
+  serialNumber: string;
   status: Status;
   submittedBy: IUser;
   schemaId: mongoose.Schema.Types.ObjectId;
@@ -116,8 +116,8 @@ export interface IInstance {
 
 export interface ISchema {
   id: mongoose.Schema.Types.ObjectId;
-  serialNumber: String;
-  name: String;
+  serialNumber: string;
+  name: string;
   createdBy: IUser;
   managersUniqueIds: [mongoose.Schema.Types.ObjectId];
   approversRoleIds: [mongoose.Schema.Types.ObjectId];
@@ -168,7 +168,7 @@ export interface IFormSchema extends ISchema {
   }[][5];
   footer: { type: IField; fieldType: FieldType.PARAGRAPH }[][3];
   header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }[][5];
-  grettingMessage: String;
+  greetingMessage: string;
 }
 
 export interface IProcessSchema extends ISchema {
@@ -182,7 +182,7 @@ export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
   footer: { type: FieldType.PARAGRAPH }[][3];
   header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }[][5];
-  grettingMessage: String;
+  greetingMessage: string;
 }
 
 export interface IDraftProcessSchema extends ISchema {
@@ -190,5 +190,7 @@ export interface IDraftProcessSchema extends ISchema {
 }
 export interface SuccessMessage {
   success: Boolean;
-  message: String;
+  message: string;
 }
+
+export { Status, ApproverStatus, FieldType };

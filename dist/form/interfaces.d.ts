@@ -31,12 +31,12 @@ export interface IFooterField extends IField {
     fieldType: FieldType.PARAGRAPH;
 }
 export interface IUser {
-    firstName: String;
-    lastName: String;
-    hierarchy: String;
-    unitId: String;
+    firstName: string;
+    lastName: string;
+    hierarchy: string;
+    unitId: string;
     uniqueId: mongoose.Schema.Types.ObjectId;
-    identifier: String;
+    identifier: string;
 }
 export interface IFormSchemaObject {
     formSchemaId: mongoose.Schema.Types.ObjectId;
@@ -49,14 +49,14 @@ export interface IFormInstanceObject {
 export interface IApproverStage {
     status: ApproverStatus;
     roleId: mongoose.Schema.Types.ObjectId;
-    reason: String;
+    reason: string;
     user: IUser;
     updatedAt: Date;
 }
 export interface IInstance {
     id: mongoose.Schema.Types.ObjectId;
-    displayName: String;
-    serialNumber: String;
+    displayName: string;
+    serialNumber: string;
     status: Status;
     submittedBy: IUser;
     schemaId: mongoose.Schema.Types.ObjectId;
@@ -64,11 +64,11 @@ export interface IInstance {
 }
 export interface ISchema {
     id: mongoose.Schema.Types.ObjectId;
-    serialNumber: String;
-    name: String;
+    serialNumber: string;
+    name: string;
     createdBy: IUser;
-    managersUniqueIds: [mongoose.Schema.Types.ObjectId];
-    approversRoleIds: [mongoose.Schema.Types.ObjectId];
+    managersUniqueIds: mongoose.Schema.Types.ObjectId[];
+    approversRoleIds: mongoose.Schema.Types.ObjectId[];
     unitId: mongoose.Schema.Types.ObjectId;
     categoryId: mongoose.Schema.Types.ObjectId;
 }
@@ -104,19 +104,16 @@ export interface IFormSchema extends ISchema {
     createdAt: Date;
     parts: [IFormSchemaPart];
     processSchemaId: mongoose.Schema.Types.ObjectId;
-    approversRoleIds: [mongoose.Schema.Types.ObjectId];
+    approversRoleIds: mongoose.Schema.Types.ObjectId[];
     isActive: Boolean;
-    foot: {
-        type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-    }[][5];
-    footer: {
+    footer: (null | {
         type: IField;
         fieldType: FieldType.PARAGRAPH;
-    }[][3];
-    header: {
+    })[][3];
+    header: (null | {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-    }[][5];
-    grettingMessage: String;
+    })[][5];
+    greetingMessage?: string;
 }
 export interface IProcessSchema extends ISchema {
     version: Number;
@@ -132,12 +129,12 @@ export interface IDraftFormSchema extends ISchema {
     header: {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
     }[][5];
-    grettingMessage: String;
+    greetingMessage: string;
 }
 export interface IDraftProcessSchema extends ISchema {
     forms: [mongoose.Schema.Types.ObjectId];
 }
 export interface SuccessMessage {
     success: Boolean;
-    message: String;
+    message: string;
 }

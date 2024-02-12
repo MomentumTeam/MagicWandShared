@@ -14,11 +14,11 @@ import {
 import { IField } from "../form/interfaces";
 
 export interface IParagraphFieldParams {
-  text: String;
+  text: string;
 }
 
 export interface IHeadlineFieldParams {
-  text: String;
+  text: string;
 }
 
 export interface IListFieldParams {
@@ -35,7 +35,7 @@ export interface ITextFieldParams {
   size: TextFieldSize;
   required?: Boolean;
   title?: HtmlString;
-  description?: String;
+  description?: string;
   minLength?: Number;
   maxLength?: Number;
 }
@@ -49,7 +49,7 @@ export interface IIdentifierFieldParams {
   identifierType: IdentifierFieldType;
   required?: Boolean;
   title?: HtmlString;
-  description?: String;
+  description?: string;
   autoComplete?: Boolean;
 }
 
@@ -57,7 +57,7 @@ export interface IDateFieldParams {
   dateFormat: DateFieldFormat;
   required?: Boolean;
   title?: HtmlString;
-  description?: String;
+  description?: string;
   autoComplete?: Boolean;
   dateRestriction?: DateFieldRestrictionType;
 }
@@ -65,14 +65,14 @@ export interface IDateFieldParams {
 export interface ITimeFieldParams {
   timeFormat: TimeFieldFormat;
   title?: HtmlString;
-  description?: String;
+  description?: string;
   required?: Boolean;
   autoComplete?: Boolean;
 }
 
 export interface INumberFieldParams {
   title?: HtmlString;
-  description?: String;
+  description?: string;
   required?: Boolean;
   minValue?: Number;
   maxValue?: Number;
@@ -105,7 +105,7 @@ export interface IDropdownFieldParams {
 
 export interface ICell {
   alignment: TableFieldCellAlignment;
-  defaultValue?: String;
+  defaultValue?: string;
   locked?: Boolean;
   required?: Boolean;
   bold?: Boolean;
@@ -121,7 +121,7 @@ export interface IColumn {
   field?: IField;
   minValue?: Number;
   maxValue?: Number;
-  options?: String[];
+  options?: string[];
 }
 
 export interface ITableFieldParams {
@@ -135,13 +135,13 @@ export interface ITableFieldParams {
 export interface IFileFieldParams {
   title?: HtmlString;
   required?: Boolean;
-  description?: String;
+  description?: string;
 }
 
 export interface IPhoneFieldParams {
   title?: HtmlString;
   required?: Boolean;
-  description?: String;
+  description?: string;
 }
 
-export type HtmlString = String;
+export type HtmlString = string;
