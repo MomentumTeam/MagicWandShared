@@ -145,19 +145,19 @@ export interface IFormSchema extends ISchema {
         }
     ];
     header: [
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         }
     ];
@@ -186,19 +186,19 @@ export interface IDraftFormSchema extends ISchema {
         }
     ];
     header: [
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         },
-        {
+        null | {
             type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
         }
     ];

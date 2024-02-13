@@ -169,11 +169,11 @@ export interface IFormSchema extends ISchema {
     null | { type: IField; fieldType: FieldType.PARAGRAPH }
   ];
   header: [
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
   ];
   greetingMessage?: string;
 }
@@ -193,11 +193,11 @@ export interface IDraftFormSchema extends ISchema {
     null | { type: IField; fieldType: FieldType.PARAGRAPH }
   ];
   header: [
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
   ];
   greetingMessage?: string;
 }
