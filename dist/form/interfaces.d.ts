@@ -1,3 +1,27 @@
+/// <reference types="mongoose/types/aggregate" />
+/// <reference types="mongoose/types/callback" />
+/// <reference types="mongoose/types/collection" />
+/// <reference types="mongoose/types/connection" />
+/// <reference types="mongoose/types/cursor" />
+/// <reference types="mongoose/types/document" />
+/// <reference types="mongoose/types/error" />
+/// <reference types="mongoose/types/expressions" />
+/// <reference types="mongoose/types/helpers" />
+/// <reference types="mongoose/types/middlewares" />
+/// <reference types="mongoose/types/indexes" />
+/// <reference types="mongoose/types/models" />
+/// <reference types="mongoose/types/mongooseoptions" />
+/// <reference types="mongoose/types/pipelinestage" />
+/// <reference types="mongoose/types/populate" />
+/// <reference types="mongoose/types/query" />
+/// <reference types="mongoose/types/schemaoptions" />
+/// <reference types="mongoose/types/schematypes" />
+/// <reference types="mongoose/types/session" />
+/// <reference types="mongoose/types/types" />
+/// <reference types="mongoose/types/utility" />
+/// <reference types="mongoose/types/validation" />
+/// <reference types="mongoose/types/virtuals" />
+/// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
 import { ICheckboxFieldParams, IDateFieldParams, IDropdownFieldParams, IFileFieldParams, IHeadlineFieldParams, IIdentifierFieldParams, IListFieldParams, ILogoFieldParams, INumberFieldParams, IParagraphFieldParams, IPhoneFieldParams, IRadioFieldParams, ISignatureFieldParams, ITableFieldParams, ITextFieldParams, ITimeFieldParams } from "../field/interfaces";
 import { FieldType } from "../field/enums";
@@ -67,8 +91,8 @@ export interface ISchema {
     serialNumber: string;
     name: string;
     createdBy: IUser;
-    managersUniqueIds: [mongoose.Schema.Types.ObjectId];
-    approversRoleIds: [mongoose.Schema.Types.ObjectId];
+    managersUniqueIds: mongoose.Schema.Types.ObjectId[];
+    approversRoleIds: mongoose.Schema.Types.ObjectId[];
     unitId: mongoose.Schema.Types.ObjectId;
     categoryId: mongoose.Schema.Types.ObjectId;
 }
@@ -104,19 +128,16 @@ export interface IFormSchema extends ISchema {
     createdAt: Date;
     parts: [IFormSchemaPart];
     processSchemaId: mongoose.Schema.Types.ObjectId;
-    approversRoleIds: [mongoose.Schema.Types.ObjectId];
+    approversRoleIds: mongoose.Schema.Types.ObjectId[];
     isActive: boolean;
-    foot: {
-        type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-    }[][5];
-    footer: {
+    footer: (null | {
         type: IField;
         fieldType: FieldType.PARAGRAPH;
-    }[][3];
-    header: {
+    })[][3];
+    header: (null | {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-    }[][5];
-    grettingMessage: string;
+    })[][5];
+    greetingMessage?: string;
 }
 export interface IProcessSchema extends ISchema {
     version: number;
@@ -132,7 +153,7 @@ export interface IDraftFormSchema extends ISchema {
     header: {
         type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
     }[][5];
-    grettingMessage: string;
+    greetingMessage?: string;
 }
 export interface IDraftProcessSchema extends ISchema {
     forms: [mongoose.Schema.Types.ObjectId];

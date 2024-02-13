@@ -119,8 +119,8 @@ export interface ISchema {
   serialNumber: string;
   name: string;
   createdBy: IUser;
-  managersUniqueIds: [mongoose.Schema.Types.ObjectId];
-  approversRoleIds: [mongoose.Schema.Types.ObjectId];
+  managersUniqueIds: mongoose.Schema.Types.ObjectId[];
+  approversRoleIds: mongoose.Schema.Types.ObjectId[];
   unitId: mongoose.Schema.Types.ObjectId;
   categoryId: mongoose.Schema.Types.ObjectId;
 }
@@ -161,14 +161,11 @@ export interface IFormSchema extends ISchema {
   createdAt: Date;
   parts: [IFormSchemaPart];
   processSchemaId: mongoose.Schema.Types.ObjectId;
-  approversRoleIds: [mongoose.Schema.Types.ObjectId];
+  approversRoleIds: mongoose.Schema.Types.ObjectId[];
   isActive: boolean;
-  foot: {
-    type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-  }[][5];
-  footer: { type: IField; fieldType: FieldType.PARAGRAPH }[][3];
-  header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }[][5];
-  grettingMessage: string;
+  footer: (null | { type: IField; fieldType: FieldType.PARAGRAPH })[][3];
+  header: (null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> })[][5];
+  greetingMessage?: string;
 }
 
 export interface IProcessSchema extends ISchema {
@@ -182,7 +179,7 @@ export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
   footer: { type: FieldType.PARAGRAPH }[][3];
   header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }[][5];
-  grettingMessage: string;
+  greetingMessage?: string;
 }
 
 export interface IDraftProcessSchema extends ISchema {
