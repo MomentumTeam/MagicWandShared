@@ -163,8 +163,18 @@ export interface IFormSchema extends ISchema {
   processSchemaId: mongoose.Schema.Types.ObjectId;
   approversRoleIds: mongoose.Schema.Types.ObjectId[];
   isActive: boolean;
-  footer: (null | { type: IField; fieldType: FieldType.PARAGRAPH })[][3];
-  header: (null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> })[][5];
+  footer: [
+    null | { type: IField; fieldType: FieldType.PARAGRAPH },
+    null | { type: IField; fieldType: FieldType.PARAGRAPH },
+    null | { type: IField; fieldType: FieldType.PARAGRAPH }
+  ];
+  header: [
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
+  ];
   greetingMessage?: string;
 }
 
@@ -177,8 +187,18 @@ export interface IProcessSchema extends ISchema {
 
 export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
-  footer: { type: FieldType.PARAGRAPH }[][3];
-  header: { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }[][5];
+  footer: [
+    null | { type: IField; fieldType: FieldType.PARAGRAPH },
+    null | { type: IField; fieldType: FieldType.PARAGRAPH },
+    null | { type: IField; fieldType: FieldType.PARAGRAPH }
+  ];
+  header: [
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
+    { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
+  ];
   greetingMessage?: string;
 }
 
