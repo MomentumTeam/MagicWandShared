@@ -1,6 +1,6 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
@@ -10,7 +10,7 @@
     "release": "npm run build && npm version patch --no-git-tag-version && git add -A && git commit -m \"$npm_config_message\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
   },
   "files": [
-    "dist/**/*"
+    "./dist/**/*"
   ],
   "description": "After making changes run: npm run release --message='Your commit message'",
   "main": "./dist/index.js",
