@@ -1,32 +1,7 @@
-/// <reference types="mongoose/types/aggregate" />
-/// <reference types="mongoose/types/callback" />
-/// <reference types="mongoose/types/collection" />
-/// <reference types="mongoose/types/connection" />
-/// <reference types="mongoose/types/cursor" />
-/// <reference types="mongoose/types/document" />
-/// <reference types="mongoose/types/error" />
-/// <reference types="mongoose/types/expressions" />
-/// <reference types="mongoose/types/helpers" />
-/// <reference types="mongoose/types/middlewares" />
-/// <reference types="mongoose/types/indexes" />
-/// <reference types="mongoose/types/models" />
-/// <reference types="mongoose/types/mongooseoptions" />
-/// <reference types="mongoose/types/pipelinestage" />
-/// <reference types="mongoose/types/populate" />
-/// <reference types="mongoose/types/query" />
-/// <reference types="mongoose/types/schemaoptions" />
-/// <reference types="mongoose/types/schematypes" />
-/// <reference types="mongoose/types/session" />
-/// <reference types="mongoose/types/types" />
-/// <reference types="mongoose/types/utility" />
-/// <reference types="mongoose/types/validation" />
-/// <reference types="mongoose/types/virtuals" />
-/// <reference types="mongoose/types/inferschematype" />
-import mongoose from "mongoose";
 import { FieldType } from "../field/enums";
 import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from "./enums";
-import { ObjectId } from "../general/types";
-import { Field, FooterField, HeaderField } from "./types";
+import { Mixed, ObjectId } from "../general/types";
+import { FooterField, HeaderField, SectionField } from "./types";
 export interface IFormSchemaPart {
     type: FormSchemaPartType;
     section?: ISection;
@@ -39,7 +14,7 @@ export interface ISection {
 }
 export interface ISectionPart {
     type: SectionPartType;
-    field?: Field;
+    field?: SectionField;
     section?: ISection;
 }
 export interface IUser {
@@ -89,8 +64,8 @@ export interface IFormInstance extends IInstance {
     isSubmitterArchived: boolean;
     isActive: boolean;
     submittedAt: Date;
-    answers: mongoose.Schema.Types.Mixed[];
-    headerAnswers: mongoose.Schema.Types.Mixed[];
+    answers: Mixed[];
+    headerAnswers: Mixed[];
     processInstanceId: ObjectId;
 }
 export interface IProcessInstance extends IInstance {
@@ -101,8 +76,8 @@ export interface IProcessInstance extends IInstance {
     approverStages: [IApproverStage];
 }
 export interface IDraftFormInstance extends IInstance {
-    answers: mongoose.Schema.Types.Mixed[];
-    headerAnswers: mongoose.Schema.Types.Mixed[];
+    answers: Mixed[];
+    headerAnswers: Mixed[];
     processInstanceId: ObjectId;
 }
 export interface IDraftProcessInstance extends IInstance {
