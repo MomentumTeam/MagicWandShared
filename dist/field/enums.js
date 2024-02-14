@@ -52,8 +52,8 @@ var DateFieldFormat;
 })(DateFieldFormat || (exports.DateFieldFormat = DateFieldFormat = {}));
 var TimeFieldFormat;
 (function (TimeFieldFormat) {
-    TimeFieldFormat["12H"] = "12H";
-    TimeFieldFormat["24H"] = "24H";
+    TimeFieldFormat["twelveHoursFormat"] = "12H";
+    TimeFieldFormat["twentyFourHoursFormat"] = "24H";
 })(TimeFieldFormat || (exports.TimeFieldFormat = TimeFieldFormat = {}));
 var OptionsLayout;
 (function (OptionsLayout) {

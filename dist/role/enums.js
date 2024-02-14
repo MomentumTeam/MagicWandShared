@@ -1,8 +1,35 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RoleType = void 0;
+exports.Rank = exports.RoleType = void 0;
 var RoleType;
 (function (RoleType) {
     RoleType["UNIT"] = "UNIT";
     RoleType["BASIC"] = "BASIC";
 })(RoleType || (exports.RoleType = RoleType = {}));
+var Rank;
+(function (Rank) {
+    Rank["\u05D0\u05DC\u05DD"] = "\u05D0\u05DC\u05DD";
+    Rank["\u05D0\u05DC\u05E3"] = "\u05D0\u05DC\u05E3";
+    Rank["\u05D0\u05E2\u05D1"] = "\u05D0\u05E2\u05D1";
+    Rank["\u05D0\u05E2\u05E6"] = "\u05D0\u05E2\u05E6";
+    Rank["\u05D8\u05D5\u05E8"] = "\u05D8\u05D5\u05E8";
+    Rank["\u05E1\u05D0\u05DC"] = "\u05E1\u05D0\u05DC";
+    Rank["\u05E1\u05D2\u05DD"] = "\u05E1\u05D2\u05DD";
+    Rank["\u05E1\u05D2\u05DF"] = "\u05E1\u05D2\u05DF";
+    Rank["\u05E1\u05DE\u05DC"] = "\u05E1\u05DE\u05DC";
+    Rank["\u05E1\u05DE\u05E8"] = "\u05E1\u05DE\u05E8";
+    Rank["\u05E1\u05E8\u05DF"] = "\u05E1\u05E8\u05DF";
+    Rank["\u05E7\u05D0\u05D1"] = "\u05E7\u05D0\u05D1";
+    Rank["\u05E7\u05DE\u05D0"] = "\u05E7\u05DE\u05D0";
+    Rank["\u05E7\u05DE\u05E9"] = "\u05E7\u05DE\u05E9";
+    Rank["\u05E7\u05E8\u05E3"] = "\u05E7\u05E8\u05E3";
+    Rank["\u05E8\u05D0\u05DC"] = "\u05E8\u05D0\u05DC";
+    Rank["\u05E8\u05D1\u05D8"] = "\u05E8\u05D1\u05D8";
+    Rank["\u05E8\u05E0\u05D2"] = "\u05E8\u05E0\u05D2";
+    Rank["\u05E8\u05E1\u05D1"] = "\u05E8\u05E1\u05D1";
+    Rank["\u05E8\u05E1\u05DC"] = "\u05E8\u05E1\u05DC";
+    Rank["\u05E8\u05E1\u05DD"] = "\u05E8\u05E1\u05DD";
+    Rank["\u05E8\u05E1\u05DF"] = "\u05E8\u05E1\u05DF";
+    Rank["\u05E8\u05E1\u05E8"] = "\u05E8\u05E1\u05E8";
+    Rank["\u05EA\u05D0\u05DC"] = "\u05EA\u05D0\u05DC";
+})(Rank || (exports.Rank = Rank = {}));

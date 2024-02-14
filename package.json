@@ -1,17 +1,23 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.30",
+  "version": "1.0.55",
   "dependencies": {
     "mongoose": "^8.0.0",
     "tsc": "^2.0.4"
   },
   "scripts": {
-    "dev": "tsc ./magicwand-interfaces/*.ts",
-    "release": "npm version patch --no-git-tag-version && git add -A && git commit -m \"$npm_config_message\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
+    "dev": "tsc",
+    "build": "tsc",
+    "release": "npm run build && npm version patch --no-git-tag-version && git add -A && git commit -m \"$npm_config_message\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
   },
-  "description": "After making changes run:  npm run release --message='Your commit message'",
+  "files": [
+    "./dist/**/*"
+  ],
+  "description": "After making changes run: npm run release --message='Your commit message'",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "devDependencies": {
+    "@types/node": "^20.11.17",
     "typescript": "^5.3.3"
   },
   "author": "",
