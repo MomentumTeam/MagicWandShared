@@ -1,27 +1,3 @@
-/// <reference types="mongoose/types/aggregate" />
-/// <reference types="mongoose/types/callback" />
-/// <reference types="mongoose/types/collection" />
-/// <reference types="mongoose/types/connection" />
-/// <reference types="mongoose/types/cursor" />
-/// <reference types="mongoose/types/document" />
-/// <reference types="mongoose/types/error" />
-/// <reference types="mongoose/types/expressions" />
-/// <reference types="mongoose/types/helpers" />
-/// <reference types="mongoose/types/middlewares" />
-/// <reference types="mongoose/types/indexes" />
-/// <reference types="mongoose/types/models" />
-/// <reference types="mongoose/types/mongooseoptions" />
-/// <reference types="mongoose/types/pipelinestage" />
-/// <reference types="mongoose/types/populate" />
-/// <reference types="mongoose/types/query" />
-/// <reference types="mongoose/types/schemaoptions" />
-/// <reference types="mongoose/types/schematypes" />
-/// <reference types="mongoose/types/session" />
-/// <reference types="mongoose/types/types" />
-/// <reference types="mongoose/types/utility" />
-/// <reference types="mongoose/types/validation" />
-/// <reference types="mongoose/types/virtuals" />
-/// <reference types="mongoose/types/inferschematype" />
 import mongoose from "mongoose";
 import { ICheckboxFieldParams, IDateFieldParams, IDropdownFieldParams, IFileFieldParams, IHeadlineFieldParams, IIdentifierFieldParams, IListFieldParams, ILogoFieldParams, INumberFieldParams, IParagraphFieldParams, IPhoneFieldParams, IRadioFieldParams, ISignatureFieldParams, ITableFieldParams, ITextFieldParams, ITimeFieldParams } from "../field/interfaces";
 import { FieldType } from "../field/enums";
@@ -38,22 +14,77 @@ export interface ISection {
 }
 export interface ISectionPart {
     type: SectionPartType;
-    field?: IField;
+    field?: Field;
     section?: ISection;
 }
-export interface IField {
-    fieldType: FieldType;
-    fieldParams: IParagraphFieldParams | IHeadlineFieldParams | IListFieldParams | ILogoFieldParams | ITextFieldParams | ISignatureFieldParams | IIdentifierFieldParams | IDateFieldParams | ITimeFieldParams | INumberFieldParams | ICheckboxFieldParams | IRadioFieldParams | IDropdownFieldParams | ITableFieldParams | IFileFieldParams | IPhoneFieldParams;
-}
-export interface ISectionField extends IField {
-    fieldType: Exclude<FieldType, FieldType.LOGO>;
-}
-export interface IHeaderField extends IField {
-    fieldType: Exclude<Exclude<FieldType, FieldType.TABLE>, FieldType.SIGNATURE>;
-}
-export interface IFooterField extends IField {
+type ParagraphField = {
     fieldType: FieldType.PARAGRAPH;
-}
+    fieldParams: IParagraphFieldParams;
+};
+type HeadlineField = {
+    fieldType: FieldType.HEADLINE;
+    fieldParams: IHeadlineFieldParams;
+};
+type ListField = {
+    fieldType: FieldType.LIST;
+    fieldParams: IListFieldParams;
+};
+type LogoField = {
+    fieldType: FieldType.LOGO;
+    fieldParams: ILogoFieldParams;
+};
+type TextField = {
+    fieldType: FieldType.TEXT;
+    fieldParams: ITextFieldParams;
+};
+type SignatureField = {
+    fieldType: FieldType.SIGNATURE;
+    fieldParams: ISignatureFieldParams;
+};
+type IdentifierField = {
+    fieldType: FieldType.IDENTIFIER;
+    fieldParams: IIdentifierFieldParams;
+};
+type DateField = {
+    fieldType: FieldType.DATE;
+    fieldParams: IDateFieldParams;
+};
+type TimeField = {
+    fieldType: FieldType.TIME;
+    fieldParams: ITimeFieldParams;
+};
+type NumberField = {
+    fieldType: FieldType.NUMBER;
+    fieldParams: INumberFieldParams;
+};
+type CheckboxField = {
+    fieldType: FieldType.CHECKBOX;
+    fieldParams: ICheckboxFieldParams;
+};
+type RadioField = {
+    fieldType: FieldType.RADIO;
+    fieldParams: IRadioFieldParams;
+};
+type DropdownField = {
+    fieldType: FieldType.DROPDOWN;
+    fieldParams: IDropdownFieldParams;
+};
+type TableField = {
+    fieldType: FieldType.TABLE;
+    fieldParams: ITableFieldParams;
+};
+type FileField = {
+    fieldType: FieldType.FILE;
+    fieldParams: IFileFieldParams;
+};
+type PhoneField = {
+    fieldType: FieldType.PHONE;
+    fieldParams: IPhoneFieldParams;
+};
+export type Field = ParagraphField | HeadlineField | ListField | LogoField | TextField | SignatureField | IdentifierField | DateField | TimeField | NumberField | CheckboxField | RadioField | DropdownField | TableField | FileField | PhoneField;
+export type SectionField = Exclude<Field, LogoField>;
+export type HeaderField = null | Exclude<Exclude<Field, TableField>, SignatureField>[];
+export type FooterField = null | ParagraphField[];
 export interface IUser {
     firstName: string;
     lastName: string;
@@ -131,35 +162,16 @@ export interface IFormSchema extends ISchema {
     approversRoleIds: mongoose.Schema.Types.ObjectId[];
     isActive: boolean;
     footer: [
-        null | {
-            type: IField;
-            fieldType: FieldType.PARAGRAPH;
-        },
-        null | {
-            type: IField;
-            fieldType: FieldType.PARAGRAPH;
-        },
-        null | {
-            type: IField;
-            fieldType: FieldType.PARAGRAPH;
-        }
+        FooterField,
+        FooterField,
+        FooterField
     ];
     header: [
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        }
+        HeaderField,
+        HeaderField,
+        HeaderField,
+        HeaderField,
+        HeaderField
     ];
     greetingMessage?: string;
 }
@@ -172,35 +184,16 @@ export interface IProcessSchema extends ISchema {
 export interface IDraftFormSchema extends ISchema {
     parts: [IFormSchemaPart];
     footer: [
-        null | {
-            type: IField;
-            fieldType: FieldType.PARAGRAPH;
-        },
-        null | {
-            type: IField;
-            fieldType: FieldType.PARAGRAPH;
-        },
-        null | {
-            type: IField;
-            fieldType: FieldType.PARAGRAPH;
-        }
+        FooterField,
+        FooterField,
+        FooterField
     ];
     header: [
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        },
-        null | {
-            type: Exclude<FieldType.TABLE, FieldType.SIGNATURE>;
-        }
+        HeaderField,
+        HeaderField,
+        HeaderField,
+        HeaderField,
+        HeaderField
     ];
     greetingMessage?: string;
 }
