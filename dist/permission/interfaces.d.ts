@@ -1,5 +1,6 @@
 import { ObjectId } from "../general/types";
 import { Permission } from "./enums";
+
 export interface IPermission {
     _id: ObjectId;
     uniqueId: string;

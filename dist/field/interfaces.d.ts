@@ -1,6 +1,7 @@
-import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
-import { IField } from "../form/interfaces";
 import { ObjectId } from "../general/types";
+import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
+import { Field } from "../form/interfaces";
+
 export interface IParagraphFieldParams {
     text: string;
 }
@@ -92,7 +93,7 @@ export interface IColumn {
     cells: ICell[];
     titleCell: ICell;
     type: ColumnType;
-    field?: IField;
+    field?: Field;
     minValue?: number;
     maxValue?: number;
     options?: string[];

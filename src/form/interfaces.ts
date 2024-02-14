@@ -41,42 +41,49 @@ export interface ISection {
 
 export interface ISectionPart {
   type: SectionPartType;
-  field?: IField;
+  field?: Field;
   section?: ISection;
 }
 
-export interface IField {
-  fieldType: FieldType;
-  fieldParams:
-    | IParagraphFieldParams
-    | IHeadlineFieldParams
-    | IListFieldParams
-    | ILogoFieldParams
-    | ITextFieldParams
-    | ISignatureFieldParams
-    | IIdentifierFieldParams
-    | IDateFieldParams
-    | ITimeFieldParams
-    | INumberFieldParams
-    | ICheckboxFieldParams
-    | IRadioFieldParams
-    | IDropdownFieldParams
-    | ITableFieldParams
-    | IFileFieldParams
-    | IPhoneFieldParams;
-}
+type ParagraphField = { fieldType: FieldType.PARAGRAPH, fieldParams: IParagraphFieldParams }
+type HeadlineField = { fieldType: FieldType.HEADLINE, fieldParams: IHeadlineFieldParams }
+type ListField = { fieldType: FieldType.LIST, fieldParams: IListFieldParams }
+type LogoField = { fieldType: FieldType.LOGO, fieldParams: ILogoFieldParams }
+type TextField = { fieldType: FieldType.TEXT, fieldParams: ITextFieldParams }
+type SignatureField = { fieldType: FieldType.SIGNATURE, fieldParams: ISignatureFieldParams }
+type IdentifierField = { fieldType: FieldType.IDENTIFIER, fieldParams: IIdentifierFieldParams }
+type DateField = { fieldType: FieldType.DATE, fieldParams: IDateFieldParams }
+type TimeField = { fieldType: FieldType.TIME, fieldParams: ITimeFieldParams }
+type NumberField = { fieldType: FieldType.NUMBER, fieldParams: INumberFieldParams }
+type CheckboxField = { fieldType: FieldType.CHECKBOX, fieldParams: ICheckboxFieldParams }
+type RadioField = { fieldType: FieldType.RADIO, fieldParams: IRadioFieldParams }
+type DropdownField = { fieldType: FieldType.DROPDOWN, fieldParams: IDropdownFieldParams }
+type TableField = { fieldType: FieldType.TABLE, fieldParams: ITableFieldParams }
+type FileField = { fieldType: FieldType.FILE, fieldParams: IFileFieldParams }
+type PhoneField = { fieldType: FieldType.PHONE, fieldParams: IPhoneFieldParams }
 
-export interface ISectionField extends IField {
-  fieldType: Exclude<FieldType, FieldType.LOGO>;
-}
+export type Field =
+  | ParagraphField
+  | HeadlineField
+  | ListField
+  | LogoField
+  | TextField
+  | SignatureField
+  | IdentifierField
+  | DateField
+  | TimeField
+  | NumberField
+  | CheckboxField
+  | RadioField
+  | DropdownField
+  | TableField
+  | FileField
+  | PhoneField
 
-export interface IHeaderField extends IField {
-  fieldType: Exclude<Exclude<FieldType, FieldType.TABLE>, FieldType.SIGNATURE>;
-}
+export type SectionField = Exclude<Field, LogoField>
+export type HeaderField = Exclude<Exclude<Field, TableField>, SignatureField>[];
+export type FooterField = ParagraphField[]
 
-export interface IFooterField extends IField {
-  fieldType: FieldType.PARAGRAPH;
-}
 
 export interface IUser {
   firstName: string;
@@ -165,16 +172,16 @@ export interface IFormSchema extends ISchema {
   approversRoleIds: ObjectId[];
   isActive: boolean;
   footer: [
-    null | { type: IField; fieldType: FieldType.PARAGRAPH },
-    null | { type: IField; fieldType: FieldType.PARAGRAPH },
-    null | { type: IField; fieldType: FieldType.PARAGRAPH }
+    FooterField,
+    FooterField,
+    FooterField,
   ];
   header: [
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
+    HeaderField,
+    HeaderField,
+    HeaderField,
+    HeaderField,
+    HeaderField
   ];
   greetingMessage?: string;
 }
@@ -189,16 +196,16 @@ export interface IProcessSchema extends ISchema {
 export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
   footer: [
-    null | { type: IField; fieldType: FieldType.PARAGRAPH },
-    null | { type: IField; fieldType: FieldType.PARAGRAPH },
-    null | { type: IField; fieldType: FieldType.PARAGRAPH }
+    FooterField,
+    FooterField,
+    FooterField,
   ];
   header: [
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> },
-    null | { type: Exclude<FieldType.TABLE, FieldType.SIGNATURE> }
+    HeaderField,
+    HeaderField,
+    HeaderField,
+    HeaderField,
+    HeaderField
   ];
   greetingMessage?: string;
 }
