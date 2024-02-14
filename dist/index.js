@@ -32,5 +32,6 @@ __exportStar(require("./field/enums"), exports);
 //types
 __exportStar(require("./general/types"), exports);
 __exportStar(require("./field/types"), exports);
+__exportStar(require("./form/types"), exports);
 __exportStar(require("./permission/types"), exports);
 __exportStar(require("./unit/types"), exports);
