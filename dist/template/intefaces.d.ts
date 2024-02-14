@@ -1,4 +1,5 @@
-import { Field, ISection } from "../form/interfaces";
+import { ISection } from "../form/interfaces";
+import { Field } from "../form/types";
 import { TemplateType } from "./enums";
 export interface ITemplate {
     name: string;

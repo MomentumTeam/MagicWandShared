@@ -1,6 +1,7 @@
 import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
 import { ObjectId } from "../general/types";
-import { Field } from "../form/interfaces";
+import { HtmlString } from "./types";
+import { Field } from "../form/types";
 export interface IParagraphFieldParams {
     text: string;
 }
@@ -114,4 +115,3 @@ export interface IPhoneFieldParams {
     required?: boolean;
     description?: string;
 }
-export type HtmlString = string;

@@ -17,5 +17,8 @@ export * from "./form/enums";
 export * from "./field/enums";
 
 //types
+export * from "./general/types";
+export * from "./field/types";
+export * from "./form/types";
 export * from "./permission/types";
 export * from "./unit/types";
