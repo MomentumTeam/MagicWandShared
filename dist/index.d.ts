@@ -6,6 +6,7 @@ export * from "./unit/interfaces";
 export * from "./permission/interfaces";
 export * from "./authentication/interfaces";
 export * from "./logo/intefaces";
+export * from "./signature/interfaces";
 export * from "./permission/enums";
 export * from "./role/enums";
 export * from "./template/enums";
