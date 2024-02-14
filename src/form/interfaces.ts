@@ -25,6 +25,7 @@ import {
   SectionPartType,
   Status,
 } from "./enums";
+import { ObjectId } from "../general/types";
 
 export interface IFormSchemaPart {
   type: FormSchemaPartType;
@@ -33,7 +34,7 @@ export interface IFormSchemaPart {
 
 export interface ISection {
   parts: ISectionPart[];
-  approverRoleId?: mongoose.Schema.Types.ObjectId;
+  approverRoleId?: ObjectId;
   hasBorder?: boolean;
   title?: string;
 }
@@ -89,47 +90,47 @@ export interface IUser {
   lastName: string;
   hierarchy: string;
   unitId: string;
-  uniqueId: mongoose.Schema.Types.ObjectId;
+  uniqueId: ObjectId;
   identifier: string;
 }
 
 export interface IFormSchemaObject {
-  formSchemaId: mongoose.Schema.Types.ObjectId;
+  formSchemaId: ObjectId;
   nextFormSchemaObject: IFormSchemaObject;
 }
 
 export interface IFormInstanceObject {
-  formInstanceId: mongoose.Schema.Types.ObjectId;
+  formInstanceId: ObjectId;
   nextFormInstanceObject: IFormInstanceObject;
 }
 
 export interface IApproverStage {
   status: ApproverStatus;
-  roleId: mongoose.Schema.Types.ObjectId;
+  roleId: ObjectId;
   reason: string;
   user: IUser;
   updatedAt: Date;
 }
 
 export interface IInstance {
-  id: mongoose.Schema.Types.ObjectId;
+  id: ObjectId;
   displayName: string;
   serialNumber: string;
   status: Status;
   submittedBy: IUser;
-  schemaId: mongoose.Schema.Types.ObjectId;
+  schemaId: ObjectId;
   approverStages: [IApproverStage];
 }
 
 export interface ISchema {
-  id: mongoose.Schema.Types.ObjectId;
+  id: ObjectId;
   serialNumber: string;
   name: string;
   createdBy: IUser;
-  managersUniqueIds: mongoose.Schema.Types.ObjectId[];
-  approversRoleIds: mongoose.Schema.Types.ObjectId[];
-  unitId: mongoose.Schema.Types.ObjectId;
-  categoryId: mongoose.Schema.Types.ObjectId;
+  managersUniqueIds: ObjectId[];
+  approversRoleIds: ObjectId[];
+  unitId: ObjectId;
+  categoryId: ObjectId;
 }
 
 export interface IFormInstance extends IInstance {
@@ -139,36 +140,36 @@ export interface IFormInstance extends IInstance {
   submittedAt: Date;
   answers: mongoose.Schema.Types.Mixed[];
   headerAnswers: mongoose.Schema.Types.Mixed[];
-  processInstanceId: mongoose.Schema.Types.ObjectId;
+  processInstanceId: ObjectId;
 }
 
 export interface IProcessInstance extends IInstance {
   status: Status;
   submittedAt: Date;
   isSubmitterArchived: boolean;
-  forms: [mongoose.Schema.Types.ObjectId];
+  forms: [ObjectId];
   approverStages: [IApproverStage];
 }
 
 export interface IDraftFormInstance extends IInstance {
   answers: mongoose.Schema.Types.Mixed[];
   headerAnswers: mongoose.Schema.Types.Mixed[];
-  processInstanceId: mongoose.Schema.Types.ObjectId;
+  processInstanceId: ObjectId;
 }
 
 export interface IDraftProcessInstance extends IInstance {
-  forms: [mongoose.Schema.Types.ObjectId];
+  forms: [ObjectId];
 }
 
 export interface IFormSchema extends ISchema {
   version: number;
   type: FormSchemaType;
-  categoryId: mongoose.Schema.Types.ObjectId;
+  categoryId: ObjectId;
   createdBy: IUser;
   createdAt: Date;
   parts: [IFormSchemaPart];
-  processSchemaId: mongoose.Schema.Types.ObjectId;
-  approversRoleIds: mongoose.Schema.Types.ObjectId[];
+  processSchemaId: ObjectId;
+  approversRoleIds: ObjectId[];
   isActive: boolean;
   footer: [
     FooterField,
@@ -187,9 +188,9 @@ export interface IFormSchema extends ISchema {
 
 export interface IProcessSchema extends ISchema {
   version: number;
-  categoryId: mongoose.Schema.Types.ObjectId;
+  categoryId: ObjectId;
   createdAt: Date;
-  forms: [mongoose.Schema.Types.ObjectId];
+  forms: [ObjectId];
 }
 
 export interface IDraftFormSchema extends ISchema {
@@ -210,7 +211,7 @@ export interface IDraftFormSchema extends ISchema {
 }
 
 export interface IDraftProcessSchema extends ISchema {
-  forms: [mongoose.Schema.Types.ObjectId];
+  forms: [ObjectId];
 }
 export interface SuccessMessage {
   success: boolean;

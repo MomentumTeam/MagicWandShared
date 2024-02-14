@@ -1,6 +1,7 @@
-import mongoose from "mongoose";
+import { ObjectId } from "../general/types";
+
 export interface ICategory {
-    _id: mongoose.Schema.Types.ObjectId;
+    _id: ObjectId;
     imageKey: string;
     name: string;
 }

@@ -1,6 +1,7 @@
-import mongoose from 'mongoose';
+import { ObjectId } from "../general/types";
 import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
 import { Field } from "../form/interfaces";
+
 export interface IParagraphFieldParams {
     text: string;
 }
@@ -13,7 +14,7 @@ export interface IListFieldParams {
     title?: HtmlString;
 }
 export interface ILogoFieldParams {
-    logoId: mongoose.Schema.Types.ObjectId;
+    logoId: ObjectId;
 }
 export interface ITextFieldParams {
     size: TextFieldSize;

@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import {
   ListFieldItemMarker,
   TextFieldSize,
@@ -11,6 +10,7 @@ import {
   TableFieldCellAlignment,
   TableFieldCellBackgroundColor,
 } from "./enums";
+import { ObjectId } from "../general/types";
 import { Field } from "../form/interfaces";
 
 export interface IParagraphFieldParams {
@@ -28,7 +28,7 @@ export interface IListFieldParams {
 }
 
 export interface ILogoFieldParams {
-  logoId: mongoose.Schema.Types.ObjectId;
+  logoId: ObjectId;
 }
 
 export interface ITextFieldParams {
