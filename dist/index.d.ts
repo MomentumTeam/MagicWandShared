@@ -10,5 +10,6 @@ export * from "./role/enums";
 export * from "./template/enums";
 export * from "./form/enums";
 export * from "./field/enums";
+export * from "./field/types";
 export * from "./permission/types";
 export * from "./unit/types";
