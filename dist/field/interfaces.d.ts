@@ -2,6 +2,7 @@ import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldForma
 import { ObjectId } from "../general/types";
 import { HtmlString } from "./types";
 import { Field } from "../form/types";
+
 export interface IParagraphFieldParams {
     text: string;
 }
