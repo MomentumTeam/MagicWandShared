@@ -1,5 +1,4 @@
 import { ObjectId } from "../general/types";
-
 export interface IUnit {
     _id: ObjectId;
     name: string;

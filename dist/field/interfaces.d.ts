@@ -1,7 +1,6 @@
-import { ObjectId } from "../general/types";
 import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
+import { ObjectId } from "../general/types";
 import { Field } from "../form/interfaces";
-
 export interface IParagraphFieldParams {
     text: string;
 }
