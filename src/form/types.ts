@@ -18,49 +18,49 @@ import {
 } from "../field/interfaces";
 import { FieldType } from "./interfaces";
 
-type ParagraphField = {
+export type ParagraphField = {
   fieldType: FieldType.PARAGRAPH;
   fieldParams: IParagraphFieldParams;
 };
-type HeadlineField = {
+export type HeadlineField = {
   fieldType: FieldType.HEADLINE;
   fieldParams: IHeadlineFieldParams;
 };
-type ListField = { fieldType: FieldType.LIST; fieldParams: IListFieldParams };
-type LogoField = { fieldType: FieldType.LOGO; fieldParams: ILogoFieldParams };
-type TextField = { fieldType: FieldType.TEXT; fieldParams: ITextFieldParams };
-type SignatureField = {
+export type ListField = { fieldType: FieldType.LIST; fieldParams: IListFieldParams };
+export type LogoField = { fieldType: FieldType.LOGO; fieldParams: ILogoFieldParams };
+export type TextField = { fieldType: FieldType.TEXT; fieldParams: ITextFieldParams };
+export type SignatureField = {
   fieldType: FieldType.SIGNATURE;
   fieldParams: ISignatureFieldParams;
 };
-type IdentifierField = {
+export type IdentifierField = {
   fieldType: FieldType.IDENTIFIER;
   fieldParams: IIdentifierFieldParams;
 };
-type DateField = { fieldType: FieldType.DATE; fieldParams: IDateFieldParams };
-type TimeField = { fieldType: FieldType.TIME; fieldParams: ITimeFieldParams };
-type NumberField = {
+export type DateField = { fieldType: FieldType.DATE; fieldParams: IDateFieldParams };
+export type TimeField = { fieldType: FieldType.TIME; fieldParams: ITimeFieldParams };
+export type NumberField = {
   fieldType: FieldType.NUMBER;
   fieldParams: INumberFieldParams;
 };
-type CheckboxField = {
+export type CheckboxField = {
   fieldType: FieldType.CHECKBOX;
   fieldParams: ICheckboxFieldParams;
 };
-type RadioField = {
+export type RadioField = {
   fieldType: FieldType.RADIO;
   fieldParams: IRadioFieldParams;
 };
-type DropdownField = {
+export type DropdownField = {
   fieldType: FieldType.DROPDOWN;
   fieldParams: IDropdownFieldParams;
 };
-type TableField = {
+export type TableField = {
   fieldType: FieldType.TABLE;
   fieldParams: ITableFieldParams;
 };
-type FileField = { fieldType: FieldType.FILE; fieldParams: IFileFieldParams };
-type PhoneField = {
+export type FileField = { fieldType: FieldType.FILE; fieldParams: IFileFieldParams };
+export type PhoneField = {
   fieldType: FieldType.PHONE;
   fieldParams: IPhoneFieldParams;
 };

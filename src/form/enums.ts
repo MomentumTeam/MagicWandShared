@@ -57,3 +57,8 @@ export enum ColumnValidationsFields {
   type = "type",
   titleCell = "titleCell",
 }
+
+export enum InstanceType { 
+  DRAFT = "DRAFT",
+  INSTANCE = "INSTANCE",
+}

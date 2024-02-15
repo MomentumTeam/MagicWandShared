@@ -1,66 +1,66 @@
 import { ICheckboxFieldParams, IDateFieldParams, IDropdownFieldParams, IFileFieldParams, IHeadlineFieldParams, IIdentifierFieldParams, IListFieldParams, ILogoFieldParams, INumberFieldParams, IParagraphFieldParams, IPhoneFieldParams, IRadioFieldParams, ISignatureFieldParams, ITableFieldParams, ITextFieldParams, ITimeFieldParams } from "../field/interfaces";
 import { FieldType } from "./interfaces";
-type ParagraphField = {
+export type ParagraphField = {
     fieldType: FieldType.PARAGRAPH;
     fieldParams: IParagraphFieldParams;
 };
-type HeadlineField = {
+export type HeadlineField = {
     fieldType: FieldType.HEADLINE;
     fieldParams: IHeadlineFieldParams;
 };
-type ListField = {
+export type ListField = {
     fieldType: FieldType.LIST;
     fieldParams: IListFieldParams;
 };
-type LogoField = {
+export type LogoField = {
     fieldType: FieldType.LOGO;
     fieldParams: ILogoFieldParams;
 };
-type TextField = {
+export type TextField = {
     fieldType: FieldType.TEXT;
     fieldParams: ITextFieldParams;
 };
-type SignatureField = {
+export type SignatureField = {
     fieldType: FieldType.SIGNATURE;
     fieldParams: ISignatureFieldParams;
 };
-type IdentifierField = {
+export type IdentifierField = {
     fieldType: FieldType.IDENTIFIER;
     fieldParams: IIdentifierFieldParams;
 };
-type DateField = {
+export type DateField = {
     fieldType: FieldType.DATE;
     fieldParams: IDateFieldParams;
 };
-type TimeField = {
+export type TimeField = {
     fieldType: FieldType.TIME;
     fieldParams: ITimeFieldParams;
 };
-type NumberField = {
+export type NumberField = {
     fieldType: FieldType.NUMBER;
     fieldParams: INumberFieldParams;
 };
-type CheckboxField = {
+export type CheckboxField = {
     fieldType: FieldType.CHECKBOX;
     fieldParams: ICheckboxFieldParams;
 };
-type RadioField = {
+export type RadioField = {
     fieldType: FieldType.RADIO;
     fieldParams: IRadioFieldParams;
 };
-type DropdownField = {
+export type DropdownField = {
     fieldType: FieldType.DROPDOWN;
     fieldParams: IDropdownFieldParams;
 };
-type TableField = {
+export type TableField = {
     fieldType: FieldType.TABLE;
     fieldParams: ITableFieldParams;
 };
-type FileField = {
+export type FileField = {
     fieldType: FieldType.FILE;
     fieldParams: IFileFieldParams;
 };
-type PhoneField = {
+export type PhoneField = {
     fieldType: FieldType.PHONE;
     fieldParams: IPhoneFieldParams;
 };
@@ -68,4 +68,3 @@ export type Field = ParagraphField | HeadlineField | ListField | LogoField | Tex
 export type SectionField = Exclude<Field, LogoField>;
 export type HeaderField = Exclude<Exclude<Field, TableField>, SignatureField>[];
 export type FooterField = ParagraphField[];
-export {};
