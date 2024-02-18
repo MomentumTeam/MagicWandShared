@@ -1,19 +1,19 @@
-import mongoose from "mongoose";
+import { ObjectId } from "../general/types";
 
 export interface IUnit {
-  _id: mongoose.Types.ObjectId;
+  _id: ObjectId;
   name: string;
-  kartoffelGroupIds: mongoose.Types.ObjectId[];
+  kartoffelGroupIds: ObjectId[];
 }
 
 export interface IAddToKartoffelGroupId {
-  id?: mongoose.Types.ObjectId;
+  id?: ObjectId;
   name?: string;
-  kartoffelGroupId: mongoose.Types.ObjectId;
+  kartoffelGroupId: ObjectId;
 }
 
 export interface IRemoveFromKartoffelGroupId {
-  id?: mongoose.Types.ObjectId;
+  id?: ObjectId;
   name?: string;
-  kartoffelGroupId: mongoose.Types.ObjectId;
+  kartoffelGroupId: ObjectId;
 }
