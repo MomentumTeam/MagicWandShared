@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ColumnValidationsFields = exports.CellValidationsFields = exports.ValidationsFields = exports.SectionPartType = exports.FormSchemaPartType = exports.ApproverStatus = exports.FormSchemaType = exports.Status = void 0;
+exports.InstanceType = exports.ColumnValidationsFields = exports.CellValidationsFields = exports.ValidationsFields = exports.SectionPartType = exports.FormSchemaPartType = exports.ApproverStatus = exports.FormSchemaType = exports.Status = void 0;
 var Status;
 (function (Status) {
     Status["APPROVED"] = "APPROVED";
@@ -61,3 +61,8 @@ var ColumnValidationsFields;
     ColumnValidationsFields["type"] = "type";
     ColumnValidationsFields["titleCell"] = "titleCell";
 })(ColumnValidationsFields || (exports.ColumnValidationsFields = ColumnValidationsFields = {}));
+var InstanceType;
+(function (InstanceType) {
+    InstanceType["DRAFT"] = "DRAFT";
+    InstanceType["INSTANCE"] = "INSTANCE";
+})(InstanceType || (exports.InstanceType = InstanceType = {}));

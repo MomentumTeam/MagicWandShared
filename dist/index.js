@@ -22,7 +22,9 @@ __exportStar(require("./kartoffel/interfaces"), exports);
 __exportStar(require("./unit/interfaces"), exports);
 __exportStar(require("./permission/interfaces"), exports);
 __exportStar(require("./authentication/interfaces"), exports);
-__exportStar(require("./logo/intefaces"), exports);
+__exportStar(require("./role/interfaces"), exports);
+__exportStar(require("./logo/interfaces"), exports);
+__exportStar(require("./signature/interfaces"), exports);
 //enums
 __exportStar(require("./permission/enums"), exports);
 __exportStar(require("./role/enums"), exports);

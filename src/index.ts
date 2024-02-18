@@ -6,7 +6,10 @@ export * from "./kartoffel/interfaces";
 export * from "./unit/interfaces";
 export * from "./permission/interfaces";
 export * from "./authentication/interfaces";
-export * from "./logo/intefaces";
+export * from "./role/interfaces";
+export * from "./logo/interfaces";
+export * from "./signature/interfaces";
+
 //enums
 export * from "./permission/enums";
 export * from "./role/enums";
