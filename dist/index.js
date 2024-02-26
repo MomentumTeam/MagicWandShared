@@ -25,6 +25,7 @@ __exportStar(require("./authentication/interfaces"), exports);
 __exportStar(require("./role/interfaces"), exports);
 __exportStar(require("./logo/interfaces"), exports);
 __exportStar(require("./signature/interfaces"), exports);
+__exportStar(require("./general/interfaces"), exports);
 //enums
 __exportStar(require("./permission/enums"), exports);
 __exportStar(require("./role/enums"), exports);

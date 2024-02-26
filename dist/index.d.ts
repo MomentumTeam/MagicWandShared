@@ -8,6 +8,7 @@ export * from "./authentication/interfaces";
 export * from "./role/interfaces";
 export * from "./logo/interfaces";
 export * from "./signature/interfaces";
+export * from "./general/interfaces";
 export * from "./permission/enums";
 export * from "./role/enums";
 export * from "./template/enums";
