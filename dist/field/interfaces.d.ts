@@ -75,7 +75,6 @@ export interface IRadioFieldParams {
 }
 export interface IDropdownFieldParams {
     options: HtmlString[];
-    layout: OptionsLayout;
     title?: HtmlString;
     required?: boolean;
 }
