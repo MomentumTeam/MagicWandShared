@@ -25,6 +25,8 @@ export interface IHeadlineFieldParams {
 export interface IListFieldParams {
   items: HtmlString[];
   itemMarker: ListFieldItemMarker;
+  description?: string;
+  layout: OptionsLayout;
   title?: HtmlString;
 }
 
