@@ -1,9 +1,8 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.57",
+  "version": "1.0.63",
   "dependencies": {
-    "mongoose": "^8.0.0",
-    "tsc": "^2.0.4"
+    "mongoose": "^8.0.0"
   },
   "scripts": {
     "dev": "tsc",

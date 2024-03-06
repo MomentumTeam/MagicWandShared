@@ -1,13 +1,13 @@
-import mongoose from "mongoose";
+import { ObjectId } from "../general/types";
 import { RoleType, Rank } from "./enums";
 
 export interface IRole {
-  _id: mongoose.Types.ObjectId;
-  unitId?: mongoose.Types.ObjectId;
+  _id: ObjectId;
+  unitId?: ObjectId;
   name?: string;
   isStaffed?: boolean;
   type: RoleType;
-  basicRoleId?: mongoose.Types.ObjectId;
+  basicRoleId?: ObjectId;
   isActive?: boolean;
   ranks?: Rank[];
   uniqueIds?: string[];

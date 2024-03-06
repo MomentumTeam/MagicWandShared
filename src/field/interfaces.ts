@@ -25,6 +25,8 @@ export interface IHeadlineFieldParams {
 export interface IListFieldParams {
   items: HtmlString[];
   itemMarker: ListFieldItemMarker;
+  description?: string;
+  layout: OptionsLayout;
   title?: HtmlString;
   layout: OptionsLayout;
   description?: string;
@@ -101,7 +103,6 @@ export interface IRadioFieldParams {
 
 export interface IDropdownFieldParams {
   options: HtmlString[];
-  layout: OptionsLayout;
   title?: HtmlString;
   required?: boolean;
 }

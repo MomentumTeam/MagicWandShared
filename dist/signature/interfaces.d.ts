@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import { ObjectId } from "../general/types";
 export interface ISignature {
-    _id: mongoose.ObjectId;
-    kartoffelEntityId: mongoose.ObjectId;
+    _id: ObjectId;
+    kartoffelEntityId: ObjectId;
     image: string;
 }

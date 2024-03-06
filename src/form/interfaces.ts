@@ -7,9 +7,9 @@ import {
   SectionPartType,
   Status,
 } from "./enums";
-import { ObjectId } from "../general/types";
-import { Field, FooterField, HeaderField } from "./types";
 import { IRole } from "../role/interfaces";
+import { Mixed, ObjectId } from "../general/types";
+import { FooterField, HeaderField, SectionField } from "./types";
 
 export interface IFormSchemaPart {
   type: FormSchemaPartType;
@@ -26,7 +26,7 @@ export interface ISection {
 
 export interface ISectionPart {
   type: SectionPartType;
-  field?: Field;
+  field?: SectionField;
   section?: ISection;
 }
 
@@ -83,8 +83,8 @@ export interface IFormInstance extends IInstance {
   isSubmitterArchived: boolean;
   isActive: boolean;
   submittedAt: Date;
-  answers: mongoose.Schema.Types.Mixed[];
-  headerAnswers: mongoose.Schema.Types.Mixed[];
+  answers: Mixed[];
+  headerAnswers: Mixed[];
   processInstanceId: ObjectId;
 }
 
@@ -97,8 +97,8 @@ export interface IProcessInstance extends IInstance {
 }
 
 export interface IDraftFormInstance extends IInstance {
-  answers: mongoose.Schema.Types.Mixed[];
-  headerAnswers: mongoose.Schema.Types.Mixed[];
+  answers: Mixed[];
+  headerAnswers: Mixed[];
   processInstanceId: ObjectId;
 }
 
