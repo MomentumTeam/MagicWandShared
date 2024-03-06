@@ -64,7 +64,9 @@ export type PhoneField = {
     fieldType: FieldType.PHONE;
     fieldParams: IPhoneFieldParams;
 };
-export type Field = ParagraphField | HeadlineField | ListField | LogoField | TextField | SignatureField | IdentifierField | DateField | TimeField | NumberField | CheckboxField | RadioField | DropdownField | TableField | FileField | PhoneField;
+export type Field = {
+    isEndOfRow?: boolean;
+} & (ParagraphField | HeadlineField | ListField | LogoField | TextField | SignatureField | IdentifierField | DateField | TimeField | NumberField | CheckboxField | RadioField | DropdownField | TableField | FileField | PhoneField);
 export type SectionField = Exclude<Field, LogoField>;
 export type HeaderField = Exclude<Exclude<Field, TableField>, SignatureField>[];
 export type FooterField = ParagraphField[];
