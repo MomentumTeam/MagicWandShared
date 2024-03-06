@@ -26,6 +26,8 @@ export interface IListFieldParams {
   items: HtmlString[];
   itemMarker: ListFieldItemMarker;
   title?: HtmlString;
+  layout: OptionsLayout;
+  description?: string;
 }
 
 export interface ILogoFieldParams {

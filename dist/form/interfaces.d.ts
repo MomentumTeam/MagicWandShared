@@ -1,15 +1,16 @@
-import mongoose from "mongoose";
+import mongoose, { PopulatedDoc } from "mongoose";
 import { FieldType } from "../field/enums";
 import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from "./enums";
 import { ObjectId } from "../general/types";
 import { Field, FooterField, HeaderField } from "./types";
+import { IRole } from "../role/interfaces"
 export interface IFormSchemaPart {
     type: FormSchemaPartType;
     section?: ISection;
 }
 export interface ISection {
     parts: ISectionPart[];
-    approverRoleId?: ObjectId;
+    approverRoleId?: PopulatedDoc<IRole>;
     hasBorder?: boolean;
     title?: string;
 }
