@@ -50,6 +50,8 @@ export interface IInstance {
     submittedBy: IUser;
     schemaId: ObjectId;
     approverStages: [IApproverStage];
+    createdAt: Date;
+    updatedAt: Date;
 }
 export interface ISchema {
     id: ObjectId;
