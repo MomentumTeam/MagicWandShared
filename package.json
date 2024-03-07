@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsc",
     "build": "tsc",
-    "release": "npm run build && npm version patch --no-git-tag-version && git add -A && git commit -m \"$npm_config_message\" && git tag v$(node -p -e \"require('./package.json').version\") && git push && git push --tags"
+    "release": "npm run build && npm version patch --no-git-tag-version && git add -A && git commit -m \"%npm_config_message%\" && git push && git push --tags"
   },
   "files": [
     "./dist/**/*"
