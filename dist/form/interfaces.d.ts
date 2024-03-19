@@ -45,7 +45,7 @@ export interface IApproverStage {
 export interface IInstance {
     id: ObjectId;
     displayName: string;
-    serialNumber: string;
+    code: string;
     status: Status;
     submittedBy: IUser;
     schemaId: ObjectId;
@@ -55,7 +55,7 @@ export interface IInstance {
 }
 export interface ISchema {
     id: ObjectId;
-    serialNumber: string;
+    code: string;
     name: string;
     createdBy: IUser;
     managersUniqueIds: ObjectId[];
