@@ -62,6 +62,8 @@ export interface ISchema {
     approversRoleIds: ObjectId[];
     unitId: ObjectId;
     categoryId: ObjectId;
+    createdAt: Date;
+    updatedAt: Date;
 }
 export interface IFormInstance extends IInstance {
     status: Status;
