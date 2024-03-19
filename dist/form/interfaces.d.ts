@@ -82,6 +82,7 @@ export interface IProcessInstance extends IInstance {
     approverStages: [IApproverStage];
 }
 export interface IDraftFormInstance extends IInstance {
+    formInstanceId: ObjectId;
     answers: Mixed[];
     headerAnswers: Mixed[];
     processInstanceId: ObjectId;
