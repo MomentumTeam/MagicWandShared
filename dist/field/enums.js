@@ -44,16 +44,16 @@ var DateFieldRestrictionType;
 })(DateFieldRestrictionType || (exports.DateFieldRestrictionType = DateFieldRestrictionType = {}));
 var DateFieldFormat;
 (function (DateFieldFormat) {
-    DateFieldFormat["DAY_MONTH_YEAR"] = "DD.MM.YY";
-    DateFieldFormat["FULL_DAY_MONTH_YEAR"] = "DD.MM.YYYY";
-    DateFieldFormat["DAY_MONTH_YEAR_SLASHES"] = "DD/MM/YY";
-    DateFieldFormat["YEAR_ONLY"] = "LLLL";
-    DateFieldFormat["HEBREW_DATE"] = "HEBREW";
+    DateFieldFormat["DD.MM.YY"] = "DD.MM.YY";
+    DateFieldFormat["DD.MM.YYYY"] = "DD.MM.YYYY";
+    DateFieldFormat["DD/MM/YY"] = "DD/MM/YY";
+    DateFieldFormat["LLLL"] = "LLLL";
+    DateFieldFormat["HEBREW"] = "HEBREW";
 })(DateFieldFormat || (exports.DateFieldFormat = DateFieldFormat = {}));
 var TimeFieldFormat;
 (function (TimeFieldFormat) {
-    TimeFieldFormat["twelveHoursFormat"] = "12H";
-    TimeFieldFormat["twentyFourHoursFormat"] = "24H";
+    TimeFieldFormat["12H"] = "12H";
+    TimeFieldFormat["24H"] = "24H";
 })(TimeFieldFormat || (exports.TimeFieldFormat = TimeFieldFormat = {}));
 var OptionsLayout;
 (function (OptionsLayout) {
