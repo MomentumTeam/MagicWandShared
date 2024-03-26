@@ -37,3 +37,4 @@ __exportStar(require("./field/types"), exports);
 __exportStar(require("./form/types"), exports);
 __exportStar(require("./permission/types"), exports);
 __exportStar(require("./unit/types"), exports);
+__exportStar(require("./config/interfaces"), exports);

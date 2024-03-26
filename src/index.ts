@@ -23,3 +23,5 @@ export * from "./field/types";
 export * from "./form/types";
 export * from "./permission/types";
 export * from "./unit/types";
+
+export * from "./config/interfaces";
