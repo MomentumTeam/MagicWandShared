@@ -11,6 +11,11 @@ export enum FormSchemaType {
   UNIT = "UNIT",
 }
 
+export enum ProcessSchemaType {
+  CORPS = "CORPS",
+  UNIT = "UNIT",
+}
+
 export enum ApproverStatus {
   WAITING = "WAITING",
   APPROVED = "APPROVED",
