@@ -49,7 +49,7 @@ export interface IInstance {
     status: Status;
     submittedBy: IUser;
     schemaId: ObjectId;
-    approverStages: [IApproverStage];
+    approverStages: IApproverStage[];
     createdAt: Date;
     updatedAt: Date;
 }
@@ -79,12 +79,7 @@ export interface IProcessInstance extends IInstance {
     submittedAt: Date;
     isSubmitterArchived: boolean;
     forms: [ObjectId];
-    approverStages: [IApproverStage];
-}
-
-export interface IFormSchemaObject {
-    formSchemaId: ObjectId;
-    nextFormSchemaObjectId: ObjectId;
+    approverStages: IApproverStage[];
 }
 export interface IDraftFormInstance extends IInstance {
     answers: Mixed[];

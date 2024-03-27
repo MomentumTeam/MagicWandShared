@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InstanceType = exports.ColumnValidationsFields = exports.CellValidationsFields = exports.ValidationsFields = exports.SectionPartType = exports.FormSchemaPartType = exports.ApproverStatus = exports.FormSchemaType = exports.Status = void 0;
+exports.InstanceType = exports.ColumnValidationsFields = exports.CellValidationsFields = exports.ValidationsFields = exports.SectionPartType = exports.FormSchemaPartType = exports.ApproverStatus = exports.ProcessSchemaType = exports.FormSchemaType = exports.Status = void 0;
 var Status;
 (function (Status) {
     Status["APPROVED"] = "APPROVED";
@@ -14,6 +14,11 @@ var FormSchemaType;
     FormSchemaType["CORPS"] = "CORPS";
     FormSchemaType["UNIT"] = "UNIT";
 })(FormSchemaType || (exports.FormSchemaType = FormSchemaType = {}));
+var ProcessSchemaType;
+(function (ProcessSchemaType) {
+    ProcessSchemaType["CORPS"] = "CORPS";
+    ProcessSchemaType["UNIT"] = "UNIT";
+})(ProcessSchemaType || (exports.ProcessSchemaType = ProcessSchemaType = {}));
 var ApproverStatus;
 (function (ApproverStatus) {
     ApproverStatus["WAITING"] = "WAITING";
