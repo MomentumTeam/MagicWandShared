@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { FieldType } from "../field/enums";
 import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from "./enums";
 import { IRole } from "../role/interfaces";
@@ -82,6 +83,7 @@ export interface IProcessInstance extends IInstance {
     approverStages: IApproverStage[];
 }
 export interface IDraftFormInstance extends IInstance {
+    formInstanceId: mongoose.Schema.Types.ObjectId;
     answers: Mixed[];
     headerAnswers: Mixed[];
     processInstanceId: ObjectId;
