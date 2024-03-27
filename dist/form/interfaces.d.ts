@@ -79,7 +79,9 @@ export interface IProcessInstance extends IInstance {
     status: Status;
     submittedAt: Date;
     isSubmitterArchived: boolean;
-    forms: [ObjectId];
+    forms: [
+        IFormInstanceObject
+    ];
     approverStages: IApproverStage[];
 }
 export interface IDraftFormInstance extends IInstance {
@@ -89,7 +91,7 @@ export interface IDraftFormInstance extends IInstance {
     processInstanceId: ObjectId;
 }
 export interface IDraftProcessInstance extends IInstance {
-    forms: [ObjectId];
+    forms: [IFormInstanceObject];
 }
 export interface IFormSchema extends ISchema {
     version: number;
@@ -119,7 +121,7 @@ export interface IProcessSchema extends ISchema {
     version: number;
     categoryId: ObjectId;
     createdAt: Date;
-    forms: [ObjectId];
+    forms: [IFormSchemaObject];
 }
 export interface IDraftFormSchema extends ISchema {
     parts: [IFormSchemaPart];
@@ -138,7 +140,7 @@ export interface IDraftFormSchema extends ISchema {
     greetingMessage?: string;
 }
 export interface IDraftProcessSchema extends ISchema {
-    forms: [ObjectId];
+    forms: [IFormSchemaObject];
 }
 export interface SuccessMessage {
     success: boolean;
