@@ -101,6 +101,7 @@ export interface IProcessInstance extends IInstance {
 }
 
 export interface IDraftFormInstance extends IInstance {
+  formInstanceId: mongoose.Schema.Types.ObjectId;
   answers: Mixed[];
   headerAnswers: Mixed[];
   processInstanceId: ObjectId;
