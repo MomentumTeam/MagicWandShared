@@ -102,6 +102,7 @@ export interface IColumn {
 export interface ITableFieldParams {
     columns: IColumn[];
     title?: HtmlString;
+    description?: string;
     required?: boolean;
     onlyForView?: boolean;
     canAddRows?: boolean;
