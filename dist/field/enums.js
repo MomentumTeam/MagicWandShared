@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ColumnType = exports.TableFieldCellBackgroundColor = exports.TableFieldCellAlignment = exports.OptionsLayout = exports.DateFieldRestrictionType = exports.IdentifierFieldType = exports.TextFieldSize = exports.ListFieldItemMarker = exports.FieldType = void 0;
+exports.ColumnType = exports.TableFieldCellBackgroundColor = exports.TableFieldCellAlignment = exports.OptionsLayout = exports.TimeFieldFormat = exports.DateFieldFormat = exports.DateFieldRestrictionType = exports.IdentifierFieldType = exports.TextFieldSize = exports.ListFieldItemMarker = exports.FieldType = void 0;
 var FieldType;
 (function (FieldType) {
     FieldType["PARAGRAPH"] = "PARAGRAPH";
@@ -42,6 +42,19 @@ var DateFieldRestrictionType;
     DateFieldRestrictionType["PAST"] = "PAST";
     DateFieldRestrictionType["FUTURE"] = "FUTURE";
 })(DateFieldRestrictionType || (exports.DateFieldRestrictionType = DateFieldRestrictionType = {}));
+var DateFieldFormat;
+(function (DateFieldFormat) {
+    DateFieldFormat["DD.MM.YY"] = "DD.MM.YY";
+    DateFieldFormat["DD.MM.YYYY"] = "DD.MM.YYYY";
+    DateFieldFormat["DD/MM/YY"] = "DD/MM/YY";
+    DateFieldFormat["LLLL"] = "LLLL";
+    DateFieldFormat["HEBREW"] = "HEBREW";
+})(DateFieldFormat || (exports.DateFieldFormat = DateFieldFormat = {}));
+var TimeFieldFormat;
+(function (TimeFieldFormat) {
+    TimeFieldFormat["12H"] = "12H";
+    TimeFieldFormat["24H"] = "24H";
+})(TimeFieldFormat || (exports.TimeFieldFormat = TimeFieldFormat = {}));
 var OptionsLayout;
 (function (OptionsLayout) {
     OptionsLayout["COLUMN"] = "COLUMN";

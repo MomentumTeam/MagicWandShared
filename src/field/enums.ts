@@ -39,7 +39,7 @@ export enum DateFieldRestrictionType {
   FUTURE = "FUTURE",
 }
 
-export declare enum DateFieldFormat {
+export enum DateFieldFormat {
   "DD.MM.YY" = "DD.MM.YY",
   "DD.MM.YYYY" = "DD.MM.YYYY",
   "DD/MM/YY" = "DD/MM/YY",
@@ -47,7 +47,7 @@ export declare enum DateFieldFormat {
   "HEBREW" = "HEBREW"
 }
 
-export declare enum TimeFieldFormat {
+export enum TimeFieldFormat {
   "12H" = "12H",
   "24H" = "24H",
 }
