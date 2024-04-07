@@ -40,15 +40,15 @@ export enum DateFieldRestrictionType {
 }
 
 export declare enum DateFieldFormat {
-  DAY_MONTH_YEAR = "DD.MM.YY",
-  FULL_DAY_MONTH_YEAR = "DD.MM.YYYY",
-  DAY_MONTH_YEAR_SLASHES = "DD/MM/YY",
-  YEAR_ONLY = "LLLL",
-  HEBREW_DATE = "HEBREW"
+  "DD.MM.YY" = "DD.MM.YY",
+  "DD.MM.YYYY" = "DD.MM.YYYY",
+  "DD/MM/YY" = "DD/MM/YY",
+  LLLL = "LLLL",
+  HEBREW = "HEBREW",
 }
 export declare enum TimeFieldFormat {
-  twelveHoursFormat = "12H",
-  twentyFourHoursFormat = "24H"
+  "12H" = "12H",
+  "24H" = "24H",
 }
 
 export enum OptionsLayout {
