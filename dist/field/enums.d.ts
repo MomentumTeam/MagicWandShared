@@ -38,8 +38,8 @@ export declare enum DateFieldFormat {
     "DD.MM.YY" = "DD.MM.YY",
     "DD.MM.YYYY" = "DD.MM.YYYY",
     "DD/MM/YY" = "DD/MM/YY",
-    LLLL = "LLLL",
-    HEBREW = "HEBREW"
+    "LLLL" = "LLLL",
+    "HEBREW" = "HEBREW"
 }
 export declare enum TimeFieldFormat {
     "12H" = "12H",
