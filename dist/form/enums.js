@@ -55,6 +55,7 @@ var ValidationsFields;
     ValidationsFields["hasOther"] = "hasOther";
     ValidationsFields["phoneRegex"] = "phoneRegex";
     ValidationsFields["autoComplete"] = "autoComplete";
+    ValidationsFields["title"] = "title";
 })(ValidationsFields || (exports.ValidationsFields = ValidationsFields = {}));
 var CellValidationsFields;
 (function (CellValidationsFields) {

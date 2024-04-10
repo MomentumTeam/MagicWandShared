@@ -44,7 +44,8 @@ export declare enum ValidationsFields {
     columns = "columns",
     hasOther = "hasOther",
     phoneRegex = "phoneRegex",
-    autoComplete = "autoComplete"
+    autoComplete = "autoComplete",
+    title = "title"
 }
 export declare enum CellValidationsFields {
     required = "required",
