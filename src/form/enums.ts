@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export enum Status {
   APPROVED = "APPROVED",
   DECLINED = "DECLINED",
@@ -50,7 +52,8 @@ export enum ValidationsFields {
   columns = "columns",
   hasOther = "hasOther",
   phoneRegex = "phoneRegex",
-  autoComplete = "autoComplete"
+  autoComplete = "autoComplete",
+  title = "title"
 }
 
 export enum CellValidationsFields {
