@@ -37,6 +37,7 @@ export interface IUserToken {
     rank: string;
     directGroup: string;
     uniqueId: string;
+    mobilePhone: string[];
     permissions: Permission[];
     unitId: string | undefined;
 }
