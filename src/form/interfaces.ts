@@ -12,7 +12,7 @@ import { Mixed, ObjectId } from "../general/types";
 import { FooterField, HeaderField, SectionField } from "./types";
 
 export interface IFormSchemaPart {
-  type: FormSchemaPartType;
+  formSchemaPartType: FormSchemaPartType;
   section?: ISection;
   approverRoleId?: ObjectId;
   approverRole?: IRole;
@@ -25,7 +25,7 @@ export interface ISection {
 }
 
 export interface ISectionPart {
-  type: SectionPartType;
+  sectionPartType: SectionPartType;
   field?: SectionField;
   section?: ISection;
 }
