@@ -74,6 +74,7 @@ export interface ISchema {
   code: string;
   name: string;
   createdBy: IUser;
+  description: string;
   managersUniqueIds: ObjectId[];
   approversRoleIds: ObjectId[];
   unitId: ObjectId;
