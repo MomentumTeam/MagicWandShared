@@ -53,7 +53,8 @@ export enum ValidationsFields {
   hasOther = "hasOther",
   phoneRegex = "phoneRegex",
   autoComplete = "autoComplete",
-  title = "title"
+  title = "title",
+  htmlString = "htmlString",
 }
 
 export enum CellValidationsFields {
