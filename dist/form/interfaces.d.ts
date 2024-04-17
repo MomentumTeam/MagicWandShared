@@ -96,7 +96,7 @@ export interface IDraftProcessInstance extends IInstance {
 }
 export interface IFormSchema extends ISchema {
     version: number;
-    type: FormSchemaType;
+    formSchemaType: FormSchemaType;
     categoryId: ObjectId;
     createdBy: IUser;
     createdAt: Date;
