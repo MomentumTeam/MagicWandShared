@@ -84,5 +84,5 @@ export type Field =
   | PhoneField;
 
 export type SectionField = Exclude<Field, LogoField>;
-export type HeaderField = Exclude<Exclude<Field, TableField>, SignatureField>[];
-export type FooterField = ParagraphField[];
+export type HeaderField = Exclude<Exclude<Exclude<Field, TableField>, SignatureField>, FileField>;
+export type FooterField = ParagraphField;

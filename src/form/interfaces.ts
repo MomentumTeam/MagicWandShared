@@ -125,16 +125,16 @@ export interface IFormSchema extends ISchema {
   approversRoleIds: ObjectId[];
   isActive: boolean;
   footer: [
-    FooterField,
-    FooterField,
-    FooterField,
+    FooterField[],
+    FooterField[],
+    FooterField[],
   ];
   header: [
-    HeaderField,
-    HeaderField,
-    HeaderField,
-    HeaderField,
-    HeaderField
+    HeaderField[],
+    HeaderField[],
+    HeaderField[],
+    HeaderField[],
+    HeaderField[]
   ];
   greetingMessage?: string;
 }
@@ -149,16 +149,16 @@ export interface IProcessSchema extends ISchema {
 export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
   footer: [
-    FooterField,
-    FooterField,
-    FooterField,
+    FooterField[],
+    FooterField[],
+    FooterField[],
   ];
   header: [
-    HeaderField,
-    HeaderField,
-    HeaderField,
-    HeaderField,
-    HeaderField
+    HeaderField[],
+    HeaderField[],
+    HeaderField[],
+    HeaderField[],
+    HeaderField[]
   ];
   greetingMessage?: string;
 }
