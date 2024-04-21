@@ -35,6 +35,7 @@ export enum FormSchemaPartType {
 export enum SectionPartType {
   SECTION = "SECTION",
   FIELD = "FIELD",
+  NEW_LINE = "NEW_LINE"
 }
 
 export enum ValidationsFields {

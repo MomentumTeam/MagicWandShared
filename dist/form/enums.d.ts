@@ -27,7 +27,8 @@ export declare enum FormSchemaPartType {
 }
 export declare enum SectionPartType {
     SECTION = "SECTION",
-    FIELD = "FIELD"
+    FIELD = "FIELD",
+    NEW_LINE = "NEW_LINE"
 }
 export declare enum ValidationsFields {
     required = "required",

@@ -37,6 +37,7 @@ var SectionPartType;
 (function (SectionPartType) {
     SectionPartType["SECTION"] = "SECTION";
     SectionPartType["FIELD"] = "FIELD";
+    SectionPartType["NEW_LINE"] = "NEW_LINE";
 })(SectionPartType || (exports.SectionPartType = SectionPartType = {}));
 var ValidationsFields;
 (function (ValidationsFields) {
