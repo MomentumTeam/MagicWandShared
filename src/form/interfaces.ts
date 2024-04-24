@@ -77,7 +77,7 @@ export interface ISchema {
   description: string;
   managersUniqueIds: ObjectId[];
   approversRoleIds: ObjectId[];
-  unitId: ObjectId;
+  unitId?: ObjectId;
   categoryId: ObjectId;
   createdAt: Date;
   updatedAt: Date;
@@ -121,8 +121,7 @@ export interface IFormSchema extends ISchema {
   createdBy: IUser;
   createdAt: Date;
   parts: [IFormSchemaPart];
-  processSchemaId: ObjectId;
-  approversRoleIds: ObjectId[];
+  processSchemaId?: ObjectId;
   isActive: boolean;
   footer: [
     FooterField[],
@@ -161,6 +160,11 @@ export interface IDraftFormSchema extends ISchema {
     HeaderField[]
   ];
   greetingMessage?: string;
+  formSchemaType: FormSchemaType;
+  categoryId: ObjectId;
+  formSchemaId?: ObjectId;
+  createdBy: IUser;
+  createdAt: Date;
 }
 
 export interface IDraftProcessSchema extends ISchema {
