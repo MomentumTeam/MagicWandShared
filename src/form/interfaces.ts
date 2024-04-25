@@ -161,10 +161,7 @@ export interface IDraftFormSchema extends ISchema {
   ];
   greetingMessage?: string;
   formSchemaType: FormSchemaType;
-  categoryId: ObjectId;
   formSchemaId?: ObjectId;
-  createdBy: IUser;
-  createdAt: Date;
 }
 
 export interface IDraftProcessSchema extends ISchema {
