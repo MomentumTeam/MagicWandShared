@@ -1,13 +1,12 @@
-import { ObjectId } from "../general/types";
 import { RoleType, Rank } from "./enums";
 
 export interface IRole {
-  _id: ObjectId;
-  unitId?: ObjectId;
+  _id: string;
+  unitId?: string;
   name?: string;
   isStaffed?: boolean;
   type: RoleType;
-  basicRoleId?: ObjectId;
+  basicRoleId?: string;
   isActive?: boolean;
   ranks?: Rank[];
   uniqueIds?: string[];

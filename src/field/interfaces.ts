@@ -10,7 +10,6 @@ import {
   TableFieldCellAlignment,
   TableFieldCellBackgroundColor,
 } from "./enums";
-import { ObjectId } from "../general/types";
 import { HtmlString } from "./types";
 import { Field } from "../form/types";
 
@@ -31,7 +30,7 @@ export interface IListFieldParams {
 }
 
 export interface ILogoFieldParams {
-  logoId: ObjectId;
+  logoId: string;
 }
 
 export interface ITextFieldParams {

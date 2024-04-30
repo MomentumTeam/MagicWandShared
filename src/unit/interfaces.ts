@@ -1,19 +1,18 @@
-import { ObjectId } from "../general/types";
 
 export interface IUnit {
-  _id: ObjectId;
+  _id: string;
   name: string;
-  kartoffelGroupIds: ObjectId[];
+  kartoffelGroupIds: string[];
 }
 
 export interface IAddToKartoffelGroupId {
-  id?: ObjectId;
+  id?: string;
   name?: string;
-  kartoffelGroupId: ObjectId;
+  kartoffelGroupId: string;
 }
 
 export interface IRemoveFromKartoffelGroupId {
-  id?: ObjectId;
+  id?: string;
   name?: string;
-  kartoffelGroupId: ObjectId;
+  kartoffelGroupId: string;
 }

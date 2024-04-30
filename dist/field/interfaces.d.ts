@@ -1,5 +1,4 @@
 import { ListFieldItemMarker, TextFieldSize, IdentifierFieldType, DateFieldFormat, DateFieldRestrictionType, TimeFieldFormat, OptionsLayout, ColumnType, TableFieldCellAlignment, TableFieldCellBackgroundColor } from "./enums";
-import { ObjectId } from "../general/types";
 import { HtmlString } from "./types";
 import { Field } from "../form/types";
 export interface IParagraphFieldParams {
@@ -16,7 +15,7 @@ export interface IListFieldParams {
     description?: string;
 }
 export interface ILogoFieldParams {
-    logoId: ObjectId;
+    logoId: string;
 }
 export interface ITextFieldParams {
     size: TextFieldSize;

@@ -1,27 +1,26 @@
-import { ObjectId } from "../general/types";
 import { Permission } from "./enums";
 
 export interface IPermission {
-  _id: ObjectId;
+  _id: string;
   uniqueId: string;
-  unitId: ObjectId;
+  unitId: string;
   permissions: Permission[];
 }
 
 export interface IAddToPermissions {
-  id?: ObjectId;
+  id?: string;
   uniqueId?: string;
   permissions: Permission[];
 }
 
 export interface IRemoveFromPermissions {
-  id?: ObjectId;
+  id?: string;
   uniqueId?: string;
   permissions: Permission[];
 }
 
 export interface IChangeUnitId {
-  id?: ObjectId;
+  id?: string;
   uniqueId?: string;
-  unitId: ObjectId;
+  unitId: string;
 }

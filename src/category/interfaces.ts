@@ -1,7 +1,6 @@
-import { ObjectId } from "../general/types";
 
 export interface ICategory {
-    _id: ObjectId,
+    _id: string,
     imageKey: string,
     name: string,
 }
