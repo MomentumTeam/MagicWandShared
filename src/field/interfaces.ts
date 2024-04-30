@@ -35,8 +35,8 @@ export interface ILogoFieldParams {
 
 export interface ITextFieldParams {
   size: TextFieldSize;
+  title: HtmlString;
   required?: boolean;
-  title?: HtmlString;
   description?: string;
   minLength?: number;
   maxLength?: number;
@@ -66,14 +66,14 @@ export interface IDateFieldParams {
 
 export interface ITimeFieldParams {
   timeFormat: TimeFieldFormat;
-  title?: HtmlString;
+  title: HtmlString;
   description?: string;
   required?: boolean;
   autoComplete?: boolean;
 }
 
 export interface INumberFieldParams {
-  title?: HtmlString;
+  title: HtmlString;
   description?: string;
   required?: boolean;
   minValue?: number;
@@ -135,7 +135,7 @@ export interface ITableFieldParams {
 }
 
 export interface IFileFieldParams {
-  title?: HtmlString;
+  title: HtmlString;
   required?: boolean;
   description?: string;
 }

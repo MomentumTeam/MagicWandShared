@@ -100,7 +100,7 @@ export interface IFormSchema extends ISchema {
     createdBy: IUser;
     createdAt: Date;
     parts: [IFormSchemaPart];
-    processSchemaId: string;
+    processSchemaId?: string;
     approversRoleIds: string[];
     isActive: boolean;
     footer: [
@@ -138,6 +138,8 @@ export interface IDraftFormSchema extends ISchema {
         HeaderField[]
     ];
     greetingMessage?: string;
+    formSchemaType: FormSchemaType;
+    formSchemaId?: string;
 }
 export interface IDraftProcessSchema extends ISchema {
     forms: [IFormSchemaObject];
