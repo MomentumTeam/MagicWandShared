@@ -1,13 +1,13 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.108",
+  "version": "1.0.110",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
   "scripts": {
     "dev": "tsc",
     "build": "tsc",
-    "release": "git stash -u && npm run build && git stash pop && git add -A && git commit -m \"$npm_config_message\" && npm version patch --no-git-tag-version && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags"
+    "release": "npm run build && git add package.json package-lock.json && git commit -m \"$npm_config_message\" && npm version patch --no-git-tag-version && git add package.json package-lock.json && git commit --amend --no-edit && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags"
   },
   "files": [
     "./dist/**/*"
