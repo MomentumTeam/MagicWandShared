@@ -17,7 +17,3 @@ export interface IUpdateRole {
     ranks?: Rank[];
     uniqueIds?: string[];
 }
-
-export interface IUpdateRoleWithId extends IUpdateRole {
-    roleId: string;
-}
