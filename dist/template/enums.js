@@ -6,3 +6,4 @@ var TemplateType;
     TemplateType["SECTION"] = "SECTION";
     TemplateType["FIELD"] = "FIELD";
 })(TemplateType || (exports.TemplateType = TemplateType = {}));
+//# sourceMappingURL=enums.js.map

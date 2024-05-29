@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
 import {
   ICheckboxFieldParams,
   IDateFieldParams,
@@ -15,8 +16,8 @@ import {
   ITableFieldParams,
   ITextFieldParams,
   ITimeFieldParams,
-} from "../field/interfaces";
-import { FieldType } from "./interfaces";
+} from '../field/interfaces';
+import { FieldType } from '../field/enums';
 
 export type ParagraphField = {
   fieldType: FieldType.PARAGRAPH;
@@ -66,7 +67,7 @@ export type PhoneField = {
 };
 
 export type Field =
-  ParagraphField
+  | ParagraphField
   | HeadlineField
   | ListField
   | LogoField

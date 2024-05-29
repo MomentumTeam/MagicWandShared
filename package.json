@@ -1,22 +1,26 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.108",
+  "version": "1.0.109",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
   "scripts": {
     "dev": "tsc",
     "build": "tsc",
-    "release": "npm run build && git add package.json package-lock.json && git commit -m \"$npm_config_message\" && npm version patch --no-git-tag-version && git add package.json package-lock.json && git commit --amend --no-edit && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags"
+    "release": "npm run build && git add package.json package-lock.json && git commit -m \"$npm_config_message\" && npm version patch --no-git-tag-version && git add package.json package-lock.json && git commit --amend --no-edit && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
-  "files": [
-    "./dist/**/*"
-  ],
-  "description": "After making changes run: npm run release --message='Your commit message'",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.2.5",
     "typescript": "^5.3.3"
   },
   "author": "",

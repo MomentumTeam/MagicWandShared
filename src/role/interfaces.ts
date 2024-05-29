@@ -1,4 +1,4 @@
-import { RoleType, Rank } from './enums';
+import { Rank, RoleType } from './enums';
 
 export interface IRole {
   _id: string;

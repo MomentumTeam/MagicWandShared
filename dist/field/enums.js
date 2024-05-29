@@ -82,3 +82,4 @@ var ColumnType;
     ColumnType["SERIAL_NUMBER"] = "SERIAL_NUMBER";
     ColumnType["DROPDOWN"] = "DROPDOWN";
 })(ColumnType || (exports.ColumnType = ColumnType = {}));
+//# sourceMappingURL=enums.js.map

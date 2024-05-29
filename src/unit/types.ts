@@ -1,3 +1,3 @@
-import { IUnit } from "./interfaces";
+import { IUnit } from './interfaces';
 
-export type INewUnit = Omit<IUnit, "_id">;
+export type INewUnit = Omit<IUnit, '_id'>;

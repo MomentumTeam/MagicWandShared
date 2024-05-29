@@ -1,4 +1,4 @@
-import { Permission } from "./enums";
+import { Permission } from './enums';
 
 export interface IPermission {
   _id: string;

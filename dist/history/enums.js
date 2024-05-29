@@ -5,3 +5,4 @@ var HistoryActionType;
 (function (HistoryActionType) {
     HistoryActionType["RETURN"] = "RETURN";
 })(HistoryActionType || (exports.HistoryActionType = HistoryActionType = {}));
+//# sourceMappingURL=enums.js.map
