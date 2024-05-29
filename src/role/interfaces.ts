@@ -17,6 +17,7 @@ export type INewRole = Omit<IRole, '_id'>;
 export interface IUpdateRole {
   name?: string;
   isActive?: boolean;
+  isStaffed?: boolean;
   ranks?: Rank[];
   uniqueIds?: string[];
 }
