@@ -37,6 +37,8 @@ export interface IUser {
   unitId: string;
   uniqueId: string;
   identifier: string;
+  identityCard?: string;
+  personalNumber?: string;
 }
 
 export interface IFormSchemaObject {
@@ -97,9 +99,7 @@ export interface IProcessInstance extends IInstance {
   status: Status;
   submittedAt: Date;
   isSubmitterArchived: boolean;
-  forms: [
-    IFormInstanceObject
-  ];
+  forms: [IFormInstanceObject];
   approverStages: IApproverStage[];
 }
 
@@ -124,11 +124,7 @@ export interface IFormSchema extends ISchema {
   processSchemaId?: string;
   approversRoleIds: string[];
   isActive: boolean;
-  footer: [
-    FooterField[],
-    FooterField[],
-    FooterField[],
-  ];
+  footer: [FooterField[], FooterField[], FooterField[]];
   header: [
     HeaderField[],
     HeaderField[],
@@ -148,11 +144,7 @@ export interface IProcessSchema extends ISchema {
 
 export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
-  footer: [
-    FooterField[],
-    FooterField[],
-    FooterField[],
-  ];
+  footer: [FooterField[], FooterField[], FooterField[]];
   header: [
     HeaderField[],
     HeaderField[],
