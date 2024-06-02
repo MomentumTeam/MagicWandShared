@@ -1,4 +1,4 @@
-import { Permission } from "../permission/enums";
+import { Permission } from '../permission/enums';
 export interface IShragaUser {
   id: string;
   adfsId: string;

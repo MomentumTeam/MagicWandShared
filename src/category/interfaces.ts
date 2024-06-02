@@ -1,6 +1,6 @@
-
 export interface ICategory {
-    _id: string,
-    imageKey: string,
-    name: string,
+  _id: string;
+  color: string;
+  minioImageUrl: string;
+  name: string;
 }

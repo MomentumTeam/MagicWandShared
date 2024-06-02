@@ -8,3 +8,4 @@ var Permission;
     Permission["CORPS_EDITOR"] = "CORPS_EDITOR";
     Permission["UNIT_EDITOR"] = "UNIT_EDITOR";
 })(Permission || (exports.Permission = Permission = {}));
+//# sourceMappingURL=enums.js.map

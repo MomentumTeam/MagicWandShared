@@ -1,4 +1,4 @@
 export enum TemplateType {
-  SECTION = "SECTION",
-  FIELD = "FIELD",
+  SECTION = 'SECTION',
+  FIELD = 'FIELD',
 }

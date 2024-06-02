@@ -1,2 +1,2 @@
-import { IPermission } from "./interfaces";
-export type INewPermission = Omit<IPermission, "_id">;
+import { IPermission } from './interfaces';
+export type INewPermission = Omit<IPermission, '_id'>;

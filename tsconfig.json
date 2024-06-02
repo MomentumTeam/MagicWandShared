@@ -1,11 +1,26 @@
 {
   "compilerOptions": {
-    "declaration": true,          // Generate .d.ts files
-    "outDir": "./dist",           // Output directory for .d.ts files
-    "module": "CommonJS", // Or "ESNext", depending on your target environment
-    "target": "ESNext", // Adjust based on the environments you need to support
-    "strict": true,               // Enable all strict type-checking options
+    "declaration": true, // ! This is important. This is what makes the .d.ts files
+    "target": "ESNext",
+    "module": "CommonJS",
+    "allowJs": false,
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "outDir": "./dist/"
   },
-  "include": ["src/**/*"],        // Include your source files
-  "exclude": ["node_modules"]     // Exclude node_modules
+  "include": ["src/**/*", "src/*"],
+  "exclude": ["node_modules"]
 }

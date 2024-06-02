@@ -1,15 +1,7 @@
-import mongoose, { PopulatedDoc } from "mongoose";
-import { FieldType } from "../field/enums";
-import {
-  ApproverStatus,
-  FormSchemaPartType,
-  FormSchemaType,
-  SectionPartType,
-  Status,
-} from "./enums";
-import { IRole } from "../role/interfaces";
-import { Mixed } from "../general/types";
-import { FooterField, HeaderField, SectionField } from "./types";
+import { Mixed } from '../general/types';
+import { IRole } from '../role/interfaces';
+import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from './enums';
+import { FooterField, HeaderField, SectionField } from './types';
 
 export interface IFormSchemaPart {
   formSchemaPartType: FormSchemaPartType;
@@ -125,13 +117,7 @@ export interface IFormSchema extends ISchema {
   approversRoleIds: string[];
   isActive: boolean;
   footer: [FooterField[], FooterField[], FooterField[]];
-  header: [
-    HeaderField[],
-    HeaderField[],
-    HeaderField[],
-    HeaderField[],
-    HeaderField[]
-  ];
+  header: [HeaderField[], HeaderField[], HeaderField[], HeaderField[], HeaderField[]];
   greetingMessage?: string;
 }
 
@@ -145,13 +131,7 @@ export interface IProcessSchema extends ISchema {
 export interface IDraftFormSchema extends ISchema {
   parts: [IFormSchemaPart];
   footer: [FooterField[], FooterField[], FooterField[]];
-  header: [
-    HeaderField[],
-    HeaderField[],
-    HeaderField[],
-    HeaderField[],
-    HeaderField[]
-  ];
+  header: [HeaderField[], HeaderField[], HeaderField[], HeaderField[], HeaderField[]];
   greetingMessage?: string;
   formSchemaType: FormSchemaType;
   formSchemaId?: string;
@@ -164,5 +144,3 @@ export interface SuccessMessage {
   success: boolean;
   message: string;
 }
-
-export { Status, ApproverStatus, FieldType };

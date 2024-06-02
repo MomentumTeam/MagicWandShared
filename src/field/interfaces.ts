@@ -1,17 +1,17 @@
+import { Field } from '../form/types';
 import {
-  ListFieldItemMarker,
-  TextFieldSize,
-  IdentifierFieldType,
+  ColumnType,
   DateFieldFormat,
   DateFieldRestrictionType,
-  TimeFieldFormat,
+  IdentifierFieldType,
+  ListFieldItemMarker,
   OptionsLayout,
-  ColumnType,
   TableFieldCellAlignment,
   TableFieldCellBackgroundColor,
-} from "./enums";
-import { HtmlString } from "./types";
-import { Field } from "../form/types";
+  TextFieldSize,
+  TimeFieldFormat,
+} from './enums';
+import { HtmlString } from './types';
 
 export interface IParagraphFieldParams {
   text: HtmlString;

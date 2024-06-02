@@ -1,4 +1,4 @@
-import { RoleType, Rank } from "./enums";
+import { Rank, RoleType } from './enums';
 
 export interface IRole {
   _id: string;
@@ -12,11 +12,16 @@ export interface IRole {
   uniqueIds?: string[];
 }
 
-export type INewRole = Omit<IRole, "_id">;
+export type INewRole = Omit<IRole, '_id'>;
 
 export interface IUpdateRole {
   name?: string;
   isActive?: boolean;
+  isStaffed?: boolean;
   ranks?: Rank[];
   uniqueIds?: string[];
+}
+
+export interface IUpdateRoleWithId extends IUpdateRole {
+  roleId: string;
 }
