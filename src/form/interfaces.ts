@@ -65,7 +65,7 @@ export interface IInstance {
 
 export interface ISchema {
   id: string;
-  code: string;
+  code: number;
   name: string;
   createdBy: IUser;
   description: string;
