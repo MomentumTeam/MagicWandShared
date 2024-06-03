@@ -28,6 +28,8 @@ export interface Name {
 }
 
 export interface IUserToken {
+  identifier?: string;
+
   // SHRAGA
   id: string;
   genesisId: string;
