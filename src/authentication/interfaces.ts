@@ -28,7 +28,7 @@ export interface Name {
 }
 
 export interface IUserToken {
-  identifier?: string;
+  identifier: string;
 
   // SHRAGA
   id: string;
