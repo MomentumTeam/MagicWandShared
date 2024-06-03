@@ -44,7 +44,7 @@ export interface IApproverStage {
     updatedAt: Date;
 }
 export interface IInstance {
-    _id: string;
+    id: string;
     displayName: string;
     code: number;
     status: Status;
@@ -55,7 +55,7 @@ export interface IInstance {
     updatedAt: Date;
 }
 export interface ISchema {
-    _id: string;
+    id: string;
     code: number;
     name: string;
     createdBy: IUser;

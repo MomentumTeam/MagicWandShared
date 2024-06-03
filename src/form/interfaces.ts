@@ -52,7 +52,7 @@ export interface IApproverStage {
 }
 
 export interface IInstance {
-  _id: string;
+  id: string;
   displayName: string;
   code: number;
   status: Status;
@@ -64,7 +64,7 @@ export interface IInstance {
 }
 
 export interface ISchema {
-  _id: string;
+  id: string;
   code: number;
   name: string;
   createdBy: IUser;
