@@ -46,7 +46,7 @@ export interface IApproverStage {
 export interface IInstance {
     id: string;
     displayName: string;
-    code: string;
+    code: number;
     status: Status;
     submittedBy: IUser;
     schemaId: string;
