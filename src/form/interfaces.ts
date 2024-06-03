@@ -1,3 +1,4 @@
+import { IUserToken } from '../authentication/interfaces';
 import { Mixed } from '../general/types';
 import { IRole } from '../role/interfaces';
 import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from './enums';
@@ -47,7 +48,7 @@ export interface IApproverStage {
   status: ApproverStatus;
   roleId: string;
   reason: string;
-  user: IUser;
+  user: IUserToken;
   updatedAt: Date;
 }
 
@@ -56,7 +57,7 @@ export interface IInstance {
   displayName: string;
   code: number;
   status: Status;
-  submittedBy: IUser;
+  submittedBy: IUserToken;
   schemaId: string;
   approverStages: IApproverStage[];
   createdAt: Date;
@@ -67,7 +68,7 @@ export interface ISchema {
   id: string;
   code: number;
   name: string;
-  createdBy: IUser;
+  createdBy: IUserToken;
   description: string;
   managersUniqueIds: string[];
   approversRoleIds: string[];
@@ -110,7 +111,7 @@ export interface IFormSchema extends ISchema {
   version: number;
   formSchemaType: FormSchemaType;
   categoryId: string;
-  createdBy: IUser;
+  createdBy: IUserToken;
   createdAt: Date;
   parts: [IFormSchemaPart];
   processSchemaId?: string;
