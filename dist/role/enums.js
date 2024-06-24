@@ -34,4 +34,3 @@ var Rank;
     Rank["ARMY_WORKING_CITIZEN"] = "ARMY_WORKING_CITIZEN";
     Rank["SECURITY_WORKING_CITIZEN"] = "SECURITY_WORKING_CITIZEN";
 })(Rank || (exports.Rank = Rank = {}));
-//# sourceMappingURL=enums.js.map

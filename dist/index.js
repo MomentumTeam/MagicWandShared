@@ -35,4 +35,3 @@ __exportStar(require("./general/types"), exports);
 __exportStar(require("./permission/types"), exports);
 __exportStar(require("./unit/types"), exports);
 __exportStar(require("./config/interfaces"), exports);
-//# sourceMappingURL=index.js.map

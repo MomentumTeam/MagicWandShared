@@ -74,4 +74,3 @@ var InstanceType;
     InstanceType["DRAFT"] = "DRAFT";
     InstanceType["INSTANCE"] = "INSTANCE";
 })(InstanceType || (exports.InstanceType = InstanceType = {}));
-//# sourceMappingURL=enums.js.map
