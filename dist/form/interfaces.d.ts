@@ -59,7 +59,7 @@ export interface ISchema {
     id: string;
     code: number;
     name: string;
-    createdBy: IUserToken;
+    createdBy: string;
     description: string;
     managersUniqueIds: string[];
     approversRoleIds: string[];
@@ -97,7 +97,6 @@ export interface IFormSchema extends ISchema {
     version: number;
     formSchemaType: FormSchemaType;
     categoryId: string;
-    createdBy: IUserToken;
     createdAt: Date;
     parts: [IFormSchemaPart];
     processSchemaId?: string;
