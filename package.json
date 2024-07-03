@@ -1,6 +1,6 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.124",
+  "version": "1.0.123",
   "dependencies": {
     "mongoose": "^8.0.0"
   },
