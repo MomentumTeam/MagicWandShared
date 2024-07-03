@@ -68,7 +68,7 @@ export interface ISchema {
   id: string;
   code: number;
   name: string;
-  createdBy: IUser;
+  createdBy: IUserToken;
   description: string;
   managersUniqueIds: string[];
   approversRoleIds: string[];
