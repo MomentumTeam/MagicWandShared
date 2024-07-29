@@ -98,7 +98,6 @@ export interface IFormSchema extends ISchema {
     version: number;
     formSchemaType: FormSchemaType;
     categoryId: string;
-    createdBy: IUserToken;
     createdAt: Date;
     parts: [IFormSchemaPart];
     processSchemaId?: string;

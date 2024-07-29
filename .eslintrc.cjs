@@ -31,7 +31,7 @@ module.exports = {
       node: true,
     },
   },
-  ignorePatterns: ['*.cjs', '*.spec.ts'],
+  ignorePatterns: ['*.cjs', '*.spec.ts', 'dist/**'],
   rules: {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
