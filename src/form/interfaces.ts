@@ -1,4 +1,5 @@
 import { IUserToken } from '../authentication/interfaces';
+import { ICategory } from '../category/interfaces';
 import { Mixed } from '../general/types';
 import { IRole } from '../role/interfaces';
 import { ApproverStatus, FormSchemaPartType, FormSchemaType, SectionPartType, Status } from './enums';
@@ -120,6 +121,10 @@ export interface IFormSchema extends ISchema {
   footer: [FooterField[], FooterField[], FooterField[]];
   header: [HeaderField[], HeaderField[], HeaderField[], HeaderField[], HeaderField[]];
   greetingMessage?: string;
+}
+
+export interface IPopulateFormSchema extends Omit<IFormSchema, 'categoryId'> {
+  category: ICategory;
 }
 
 export interface IProcessSchema extends ISchema {

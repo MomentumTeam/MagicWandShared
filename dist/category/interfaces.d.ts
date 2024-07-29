@@ -3,4 +3,5 @@ export interface ICategory {
     color: string;
     minioImageUrl: string;
     name: string;
+    displayName: string;
 }
