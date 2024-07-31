@@ -12,6 +12,10 @@ export interface IRole {
   uniqueIds?: string[];
 }
 
+export interface IRolePopulated extends IRole {
+  role: IRole;
+}
+
 export type INewRole = Omit<IRole, '_id'>;
 
 export interface IUpdateRole {
