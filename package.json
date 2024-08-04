@@ -1,14 +1,13 @@
 {
   "name": "magicwand-shared",
-  "version": "1.0.131",
+  "version": "1.0.132",
   "dependencies": {
-    "magicwand-shared": "github:MomentumTeam/MagicWandShared#v1.0.123",
     "mongoose": "^8.0.0"
   },
   "scripts": {
     "dev": "tsc",
     "build": "tsc",
-    "release": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version && git add . && git commit -m \"$npm_config_message\" && git tag v1.0.127 && git push && git push --tags"
+    "release": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version && git add . && git commit -m \"$npm_config_message\" && git tag v$(node -p \"require('./package.json').version\") && git push && git push --tags"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
