@@ -31,6 +31,7 @@ export interface IKartoffelUser {
   identityCard: string;
   digitalIdentities: IDigitalIdentity[];
   hierarchy: string;
+  hierarchyIds:string[];
   directGroup: string;
   ancestors: string[];
   entityType: string;

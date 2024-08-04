@@ -45,6 +45,7 @@ export interface IUserToken {
   directGroup: string;
   uniqueId: string;
   mobilePhone: string[];
+  hierarchyIds: string[];
 
   //MAGICWAND
   permissions: Permission[];

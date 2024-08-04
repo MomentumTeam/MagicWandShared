@@ -39,6 +39,7 @@ export interface IUserToken {
     directGroup: string;
     uniqueId: string;
     mobilePhone: string[];
+    hierarchyIds: string[];
     permissions: Permission[];
     unitId: string | undefined;
 }
