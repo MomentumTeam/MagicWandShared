@@ -89,6 +89,17 @@ export interface IFormInstance extends IInstance {
   processInstanceId: string;
 }
 
+export interface ISearchFormsQuery {
+  isArchived: boolean;
+  search?: string;
+  status?: Status;
+  submittedAt?: Date;
+}
+
+export interface ISearchFormsApproverQuery extends ISearchFormsQuery {
+  ApproverStatus?: ApproverStatus;
+}
+
 export interface IProcessInstance extends IInstance {
   status: Status;
   submittedAt: Date;
