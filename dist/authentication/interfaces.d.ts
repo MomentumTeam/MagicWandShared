@@ -26,7 +26,6 @@ export interface Name {
     lastName: string;
 }
 export interface IUser {
-    identifier: string;
     id: string;
     genesisId: string;
     iat: number;
