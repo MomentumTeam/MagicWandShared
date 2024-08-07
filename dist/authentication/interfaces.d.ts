@@ -38,7 +38,7 @@ export interface IUser {
     directGroup: string;
     uniqueId: string;
     mobilePhone: string[];
-    hierarchyIds?: string[];
+    hierarchyIds: string[];
     permissions: Permission[];
     unitId: string | undefined;
 }
