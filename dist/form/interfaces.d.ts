@@ -20,16 +20,6 @@ export interface ISectionPart {
     field?: SectionField;
     section?: ISection;
 }
-export interface IUser {
-    firstName: string;
-    lastName: string;
-    hierarchy: string;
-    unitId: string;
-    uniqueId: string;
-    identifier: string;
-    identityCard?: string;
-    personalNumber?: string;
-}
 export interface IFormSchemaObject {
     formSchemaId: string;
     nextFormSchemaObject: IFormSchemaObject;
@@ -42,7 +32,7 @@ export interface IApproverStage {
     status: ApproverStatus;
     roleId: string;
     reason: string;
-    user: IUser;
+    user: IUserToken;
     updatedAt: Date;
 }
 export interface IInstance {
