@@ -45,7 +45,7 @@ export interface IUser {
   directGroup: string;
   uniqueId: string;
   mobilePhone: string[];
-  hierarchyIds: string[];
+  hierarchyIds?: string[];
 
   //MAGICWAND
   permissions: Permission[];
