@@ -42,7 +42,7 @@ export interface IApproverStage {
     status: ApproverStatus;
     roleId: string;
     reason: string;
-    user: IUserToken;
+    user: IUser;
     updatedAt: Date;
 }
 export interface IInstance {
