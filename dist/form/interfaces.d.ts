@@ -1,4 +1,4 @@
-import { IUserToken } from '../authentication/interfaces';
+import { IUser } from '../authentication/interfaces';
 import { ICategory } from '../category/interfaces';
 import { Mixed } from '../general/types';
 import { IRole } from '../role/interfaces';
@@ -32,7 +32,7 @@ export interface IApproverStage {
     status: ApproverStatus;
     roleId: string;
     reason: string;
-    user: IUserToken;
+    user: IUser;
     updatedAt: Date;
 }
 export interface IInstance {
@@ -40,7 +40,7 @@ export interface IInstance {
     displayName: string;
     code: number;
     status: Status;
-    submittedBy: IUserToken;
+    submittedBy: IUser;
     schemaId: string;
     approverStages: IApproverStage[];
     createdAt: Date;
@@ -50,7 +50,7 @@ export interface ISchema {
     id: string;
     code: number;
     name: string;
-    createdBy: IUserToken;
+    createdBy: IUser;
     description: string;
     managersUniqueIds: string[];
     approversRoleIds: string[];

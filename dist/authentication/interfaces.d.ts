@@ -25,7 +25,7 @@ export interface Name {
     firstName: string;
     lastName: string;
 }
-export interface IUserToken {
+export interface IUser {
     identifier: string;
     id: string;
     genesisId: string;
