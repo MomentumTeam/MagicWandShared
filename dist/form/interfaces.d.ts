@@ -7,8 +7,7 @@ import { FooterField, HeaderField, SectionField } from './types';
 export interface IFormSchemaPart {
     formSchemaPartType: FormSchemaPartType;
     section?: ISection;
-    approverRoleId?: string;
-    approverRole?: IRole;
+    approverRole?: IRole | string;
 }
 export interface ISection {
     parts: ISectionPart[];
