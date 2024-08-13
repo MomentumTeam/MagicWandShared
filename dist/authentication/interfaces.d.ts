@@ -26,12 +26,11 @@ export interface Name {
     lastName: string;
 }
 export interface IUser {
+    identifier: string;
     id: string;
     genesisId: string;
     iat: number;
     exp: number;
-    identityCard: string;
-    personalNumber: string;
     displayName: string;
     fullName: string;
     rank: string;

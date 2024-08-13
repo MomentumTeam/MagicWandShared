@@ -28,7 +28,7 @@ export interface Name {
 }
 
 export interface IUser {
-  // identifier: string;
+  identifier: string;
 
   // SHRAGA
   id: string;
@@ -37,8 +37,6 @@ export interface IUser {
   exp: number;
 
   // KARTOFFEL
-  identityCard: string;
-  personalNumber: string;
   displayName: string;
   fullName: string;
   rank: string;
