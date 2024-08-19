@@ -26,13 +26,13 @@ export interface Name {
     lastName: string;
 }
 export interface IUser {
-    identifier: string;
     id: string;
     genesisId: string;
     iat: number;
     exp: number;
     displayName: string;
     fullName: string;
+    identityCard: string;
     rank: string;
     directGroup: string;
     uniqueId: string;
