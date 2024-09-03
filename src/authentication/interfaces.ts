@@ -43,6 +43,7 @@ export interface IUser {
   uniqueId: string;
   mobilePhone: string[];
   hierarchyIds: string[];
+  mail: string;
 
   //MAGICWAND
   permissions: Permission[];
