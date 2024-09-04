@@ -38,6 +38,7 @@ export interface IUser {
     uniqueId: string;
     mobilePhone: string[];
     hierarchyIds: string[];
+    mail: string;
     permissions: Permission[];
     unitId: string | undefined;
 }
