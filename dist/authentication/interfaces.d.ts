@@ -26,6 +26,7 @@ export interface Name {
     lastName: string;
 }
 export interface IUser {
+    identifier: string;
     id: string;
     genesisId: string;
     iat: number;
@@ -33,11 +34,13 @@ export interface IUser {
     displayName: string;
     fullName: string;
     identityCard: string;
+    personalNumber: string;
     rank: string;
     directGroup: string;
     uniqueId: string;
     mobilePhone: string[];
     hierarchyIds: string[];
+    mail: string;
     permissions: Permission[];
     unitId: string | undefined;
 }

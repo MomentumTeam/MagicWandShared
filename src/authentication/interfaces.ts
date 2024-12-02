@@ -28,6 +28,8 @@ export interface Name {
 }
 
 export interface IUser {
+  identifier: string; 
+
   // SHRAGA
   id: string;
   genesisId: string;
@@ -38,11 +40,13 @@ export interface IUser {
   displayName: string;
   fullName: string;
   identityCard: string;
+  personalNumber: string;
   rank: string;
   directGroup: string;
   uniqueId: string;
   mobilePhone: string[];
   hierarchyIds: string[];
+  mail: string;
 
   //MAGICWAND
   permissions: Permission[];

@@ -65,6 +65,7 @@ export interface ISchema {
   categoryId: string;
   createdAt: Date;
   updatedAt: Date;
+  schemaType: string;
 }
 
 export interface IFormInstance extends IInstance {
